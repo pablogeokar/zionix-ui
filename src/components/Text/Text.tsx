@@ -9,8 +9,12 @@ interface TextProps {
 
 export default function Text({ children }: TextProps) {
   return (
-    <span style={{color: 'var(--primary)'}}>
+    <StyledText>
       {children}
-    </span>
+    </StyledText>
   )
 }
+
+const StyledText = styled.span`
+  color: var(--primary);
+`

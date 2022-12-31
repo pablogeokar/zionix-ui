@@ -9,6 +9,7 @@ const packageJson = require("./package.json");
 module.exports = [
   {
     input: "src/index.ts",
+    external: Object.keys(packageJson.peerDependencies || {}),
     output: [
       {
         file: packageJson.main,
@@ -25,7 +26,10 @@ module.exports = [
       resolve(),
       commonjs(),
       typescript({ tsconfig: "./tsconfig.json" }),
-      postcss(),
+      postcss({
+        plugins: [],
+        minimize: true,
+      }),
     ],
   },
   {
