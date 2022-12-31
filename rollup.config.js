@@ -9,7 +9,7 @@ const packageJson = require("./package.json");
 module.exports = [
   {
     input: "src/index.ts",
-    external: Object.keys(packageJson.peerDependencies || {}),
+    external: ["react", "styled-components"],
     output: [
       {
         file: packageJson.main,
@@ -23,7 +23,7 @@ module.exports = [
       },
     ],
     plugins: [
-      resolve(),
+      resolve({ moduleDirectories: ["node_modules"] }),
       commonjs(),
       typescript({ tsconfig: "./tsconfig.json" }),
       postcss({
@@ -34,7 +34,12 @@ module.exports = [
   },
   {
     input: "dist/esm/types/index.d.ts",
-    output: [{ file: "dist/index.d.ts", format: "esm" }],
+    output: [
+      {
+        file: "dist/index.d.ts",
+        format: "esm",
+      },
+    ],
     plugins: [dts.default()],
     external: [/\.css$/],
   },
