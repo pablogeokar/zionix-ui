@@ -1,13 +1,20 @@
 {
   "name": "@zionix/ui",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A collection of ready-to-use components based on styled-components",
   "repository": "https://github.com/pablogeokar/zionix-ui.git",
   "author": "Pablo George <pablogeokar@hotmail.com>",
   "license": "MIT",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
-  "keywords": ["react", "typescript", "ui", "library ui", "styled-components", "react-component"],
+  "keywords": [
+    "react",
+    "typescript",
+    "ui",
+    "library ui",
+    "styled-components",
+    "react-component"
+  ],
   "files": [
     "dist"
   ],
