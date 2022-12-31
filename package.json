@@ -7,12 +7,14 @@
   "license": "MIT",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
+  "keywords": ["react", "typescript", "ui", "library ui", "styled-components", "react-component"],
   "files": [
     "dist"
   ],
   "types": "dist/index.d.ts",
   "scripts": {
-    "rollup": "rollup -c"
+    "rollup": "rollup -c",
+    "postversion": "git push --follow-tags && git push --tags && npm publish && echo \"Successfully released version $npm_package_version!\""
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^24.0.0",
