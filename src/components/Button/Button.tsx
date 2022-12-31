@@ -1,11 +1,15 @@
-import React from 'react';
+import React, { InputHTMLAttributes } from "react";
 
-interface ButtonProps {
-  label?: string;
+export interface OwnProps extends InputHTMLAttributes<HTMLButtonElement> {
+  label?: string
 }
 
-export default function Button({ label }: ButtonProps) {
+const ButtonWrapper = (props: OwnProps) => {
   return (
-    <button>{label}</button>
+    <div>
+      <button>{props.label}</button>
+    </div>
   )
 }
+
+export default ButtonWrapper;

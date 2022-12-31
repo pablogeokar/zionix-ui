@@ -1,23 +1,21 @@
-const resolve = require("@rollup/plugin-node-resolve");
-const commonjs = require("@rollup/plugin-commonjs");
-const typescript = require("@rollup/plugin-typescript");
-const dts = require("rollup-plugin-dts");
-const postcss = require("rollup-plugin-postcss");
+import resolve from "@rollup/plugin-node-resolve";
+import commonjs from "@rollup/plugin-commonjs";
+import typescript from "@rollup/plugin-typescript";
+import dts from "rollup-plugin-dts";
 
-const packageJson = require("./package.json");
+import pkg from "./package.json" assert { type: "json" };
 
-module.exports = [
+export default [
   {
     input: "src/index.ts",
-    external: ["react", "styled-components"],
     output: [
       {
-        file: packageJson.main,
+        file: pkg.main,
         format: "cjs",
         sourcemap: true,
       },
       {
-        file: packageJson.module,
+        file: pkg.module,
         format: "esm",
         sourcemap: true,
       },
@@ -26,10 +24,6 @@ module.exports = [
       resolve({ moduleDirectories: ["node_modules"] }),
       commonjs(),
       typescript({ tsconfig: "./tsconfig.json" }),
-      postcss({
-        plugins: [],
-        minimize: true,
-      }),
     ],
   },
   {
@@ -40,7 +34,6 @@ module.exports = [
         format: "esm",
       },
     ],
-    plugins: [dts.default()],
-    external: [/\.css$/],
+    plugins: [dts()],
   },
 ];
