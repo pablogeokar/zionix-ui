@@ -28,8 +28,7 @@ export default [
       typescript({ tsconfig: "./tsconfig.json" }),
       commonjs(),
       postcss(),
-    ],
-    external: ["styled-components"],
+    ],    
   },
   {
     input: "dist/esm/types/index.d.ts",
