@@ -30,10 +30,8 @@ export const ThemeContextProvider = ({ children }: IProps) => {
             box-sizing: inherit;
           }
           body{
-            background: ${INITIAL_STATE.colors.body};
-            background: var(--bg, ${INITIAL_STATE.colors.body});
-            color: ${INITIAL_STATE.colors.black};
-            color: var(--black, ${INITIAL_STATE.colors.black});
+            background: ${INITIAL_STATE.colors.body};            
+            color: ${INITIAL_STATE.colors.black};            
             margin: 0;
             padding: 0;
             font-size: 1.6rem;
