@@ -1,5 +1,5 @@
 import React, { InputHTMLAttributes } from "react";
-import styled from 'styled-components'
+import styles from './Button.module.css'
 
 export interface OwnProps extends InputHTMLAttributes<HTMLButtonElement> {
   label?: string
@@ -8,14 +8,9 @@ export interface OwnProps extends InputHTMLAttributes<HTMLButtonElement> {
 const ButtonWrapper = (props: OwnProps) => {
   return (
     <div>
-      <Button>{props.label}</Button>
+      <button className={styles.button}>{props.label}</button>
     </div>
   )
 }
-
-const Button = styled.button`
-  background-color: #000;
-  color: #fff;
-`
 
 export default ButtonWrapper;
