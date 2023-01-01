@@ -12,8 +12,15 @@ export const ThemeContextProvider = ({ children }: IProps) => {
       <style type="text/css">
         {`
           :root{
-            --body-bg : ${INITIAL_STATE.colors.body};
-            --text-black: ${INITIAL_STATE.colors.black};
+            --bg:           ${INITIAL_STATE.colors.body};
+            --black:        ${INITIAL_STATE.colors.black};
+            --primary:      ${INITIAL_STATE.colors.primary};
+            --text-xsmall:  ${INITIAL_STATE.fontSizes.xsmall};
+            --text-small:   ${INITIAL_STATE.fontSizes.small};
+            --text-normal:  ${INITIAL_STATE.fontSizes.normal};
+            --text-large:   ${INITIAL_STATE.fontSizes.large};
+            --text-xlarge:  ${INITIAL_STATE.fontSizes.xlarge};
+            --text-xxlarge: ${INITIAL_STATE.fontSizes.xxlarge};
           }
           html {
             box-sizing: border-box;
@@ -24,9 +31,9 @@ export const ThemeContextProvider = ({ children }: IProps) => {
           }
           body{
             background: ${INITIAL_STATE.colors.body};
-            background: var(--body-bg, ${INITIAL_STATE.colors.body});
+            background: var(--bg, ${INITIAL_STATE.colors.body});
             color: ${INITIAL_STATE.colors.black};
-            background: var(--text-black, ${INITIAL_STATE.colors.black});
+            color: var(--black, ${INITIAL_STATE.colors.black});
             margin: 0;
             padding: 0;
             font-size: 1.6rem;

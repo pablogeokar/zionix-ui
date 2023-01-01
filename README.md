@@ -6,7 +6,7 @@ THIS COMPONENT IS STILL BEING DEVELOPED, IF YOU WANT TO CONTRIBUTE YOU CAN CONTA
 
 ## Quick start
 
-Import `pages/_app.ts` module to instantiate text field component.
+Import into `pages/_app.ts` ThemeContextProvider and ThemeFont
 
 First you will import the ThemeContextProvider and ThemeFont to the main page of your react project as in the example below,
 ThemeFont is optional, if you already have your own font loading routine, this component can be safely left out.
