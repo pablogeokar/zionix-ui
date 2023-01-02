@@ -18,13 +18,13 @@ export interface TextProps {
   level?: 1 | 2 | 3 | 4 | 5 | 6;
   fontWeight?: 100 | 200 | 300 | 400 | 500 | 600 | 700 | 800 | 900 | "bold";
   lineHeight?: string | number;
-  onClick?: () => void
-  style?: {}
-  className?: string
   color?: string
   primary?: boolean
   secondary?: boolean
   accent?: boolean
+  onClick?: () => void
+  style?: {}
+  className?: string
 }
 
 export default function Text({
@@ -66,13 +66,13 @@ export default function Text({
   };
   return (
     <>
-      {!level && <span className={`${css.text}  ${primary ? css['text--primary'] : ''} ${secondary ? css['text--seconday'] : ''} ${accent ? css['text--accent'] : ''} ${className ? className : ''}`} onClick={onClick} style={{ ...styles.span, ...style }}>{children}</span>}
-      {level === 1 && <h1 className={`${css.text} ${primary ? css['text--primary'] : ''} ${secondary ? css['text--seconday'] : ''} ${accent ? css['text--accent'] : ''} ${className ? className : ''} `} onClick={onClick} style={{ ...styles.h1, ...style }}>{children}</h1>}
-      {level === 2 && <h2 className={`${css.text} ${primary ? css['text--primary'] : ''} ${secondary ? css['text--seconday'] : ''} ${accent ? css['text--accent'] : ''} ${className ? className : ''} ${className ? className : ''}`} onClick={onClick} style={{ ...styles.h2, ...style }}>{children}</h2>}
-      {level === 3 && <h3 className={`${css.text} ${primary ? css['text--primary'] : ''} ${secondary ? css['text--seconday'] : ''} ${accent ? css['text--accent'] : ''} ${className ? className : ''} ${className ? className : ''}`} onClick={onClick} style={{ ...styles.h3, ...style }}>{children}</h3>}
-      {level === 4 && <h4 className={`${css.text} ${primary ? css['text--primary'] : ''} ${secondary ? css['text--seconday'] : ''} ${accent ? css['text--accent'] : ''} ${className ? className : ''} ${className ? className : ''}`} onClick={onClick} style={{ ...styles.h4, ...style }}>{children}</h4>}
-      {level === 5 && <h5 className={`${css.text} ${primary ? css['text--primary'] : ''} ${secondary ? css['text--seconday'] : ''} ${accent ? css['text--accent'] : ''} ${className ? className : ''} ${className ? className : ''}`} onClick={onClick} style={{ ...styles.h5, ...style }}>{children}</h5>}
-      {level === 6 && <h6 className={`${css.text} ${primary ? css['text--primary'] : ''} ${secondary ? css['text--seconday'] : ''} ${accent ? css['text--accent'] : ''} ${className ? className : ''} ${className ? className : ''}`} onClick={onClick} style={{ ...styles.h6, ...style }}>{children}</h6>}
+      {!level && <span className={`${css.text} ${primary ? css['text--primary'] : ''} ${secondary ? css['text--seconday'] : ''} ${accent ? css['text--accent'] : ''} ${className ? className : ''}`} onClick={onClick} style={{ ...styles.span, ...style }}>{children}</span>}
+      {level === 1 && <h1 className={`${css.text} ${primary ? css['text--primary'] : ''} ${secondary ? css['text--seconday'] : ''} ${accent ? css['text--accent'] : ''} ${className ? className : ''}`} onClick={onClick} style={{ ...styles.h1, ...style }}>{children}</h1>}
+      {level === 2 && <h2 className={`${css.text} ${primary ? css['text--primary'] : ''} ${secondary ? css['text--seconday'] : ''} ${accent ? css['text--accent'] : ''} ${className ? className : ''}`} onClick={onClick} style={{ ...styles.h2, ...style }}>{children}</h2>}
+      {level === 3 && <h3 className={`${css.text} ${primary ? css['text--primary'] : ''} ${secondary ? css['text--seconday'] : ''} ${accent ? css['text--accent'] : ''} ${className ? className : ''}`} onClick={onClick} style={{ ...styles.h3, ...style }}>{children}</h3>}
+      {level === 4 && <h4 className={`${css.text} ${primary ? css['text--primary'] : ''} ${secondary ? css['text--seconday'] : ''} ${accent ? css['text--accent'] : ''} ${className ? className : ''}`} onClick={onClick} style={{ ...styles.h4, ...style }}>{children}</h4>}
+      {level === 5 && <h5 className={`${css.text} ${primary ? css['text--primary'] : ''} ${secondary ? css['text--seconday'] : ''} ${accent ? css['text--accent'] : ''} ${className ? className : ''}`} onClick={onClick} style={{ ...styles.h5, ...style }}>{children}</h5>}
+      {level === 6 && <h6 className={`${css.text} ${primary ? css['text--primary'] : ''} ${secondary ? css['text--seconday'] : ''} ${accent ? css['text--accent'] : ''} ${className ? className : ''}`} onClick={onClick} style={{ ...styles.h6, ...style }}>{children}</h6>}
     </>
   )
 }
