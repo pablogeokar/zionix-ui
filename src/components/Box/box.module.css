@@ -10,11 +10,17 @@
 
 .row {
   display: flex;
+  align-items: center;
   gap: var(--gap, 1rem);
 }
 
+.row--mobile {
+  flex-direction: column;
+  justify-content: center;
+}
+
 @media only screen and (max-width: 360px) {
-  .box-module_row__T2aQb {
+  .box {
     flex-direction: column;
     justify-content: center;
   }

@@ -1,9 +1,5 @@
-import { createContext, useEffect, useState } from "react";
-
-interface Screen {
-  width: number;
-  height: number;
-}
+import { createContext } from "react";
+import { Screen } from "../types/screen";
 
 export const INITIAL_STATE = {
   colors: {

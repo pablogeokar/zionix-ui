@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react"
 import { ThemeContext, INITIAL_STATE } from "./context"
 
+import { Screen } from "../types/screen"
+
 interface IProps {
   children: React.ReactNode
 }
@@ -8,18 +10,13 @@ interface IProps {
 export const ThemeContextProvider = ({ children }: IProps) => {
 
 
-  interface Screen {
-    width: number;
-    height: number;
-  }
-
-  const [SCREEN, setSCREEN] = useState<Screen>({ width: 0, height: 0 });
+  const [SCREEN, setSCREEN] = useState<Screen>({ screen: { width: 0, height: 0 } });
 
   useEffect(() => {
     function handleResize() {
       const width = window.innerWidth;
       const height = window.innerHeight;
-      setSCREEN({ width, height });
+      setSCREEN({ screen: { width, height } });
     }
 
     // Add event listener

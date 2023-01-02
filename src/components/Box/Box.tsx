@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import css from './box.module.css'
-import './box.module.css'
+import { useThemeContext } from '../../context';
 
 
 interface BoxProps extends React.HTMLAttributes<HTMLDivElement> {
@@ -12,7 +12,15 @@ export function Container(props: BoxProps) {
 }
 
 export function Row(props: BoxProps) {
-  return <div {...props} className={css['row']}>{props.children}</div>
+  const theme = useThemeContext();
+
+  /*
+  useEffect(() => {
+    console.log('Mudou o tamanho da tela')
+  }, [theme.screen.height, theme.screen.height])
+  */
+
+  return <div {...props} className={`${css['row']} ${theme.screen.width <= 480 ? css['row--mobile'] : ''}`}>{props.children}</div>
 }
 
 
