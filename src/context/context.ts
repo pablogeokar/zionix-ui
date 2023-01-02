@@ -1,4 +1,9 @@
-import { createContext } from "react";
+import { createContext, useEffect, useState } from "react";
+
+interface Screen {
+  width: number;
+  height: number;
+}
 
 export const INITIAL_STATE = {
   colors: {
@@ -11,18 +16,21 @@ export const INITIAL_STATE = {
     lightGray: "#bbbbbb",
   },
   fontSizes: {
-    xsmall: "1rem",
-    small: "1.2rem",
-    normal: "1.6rem",
-    large: "2.1rem",
-    xlarge: "3.2rem",
-    xxlarge: "4rem",
+    size300: "0.75rem",
+    size400: "1rem",
+    size500: "1.33rem",
+    size600: "1.77rem",
+    size700: "2.36rem",
+    size800: "3.15rem",
+    size900: "4.2rem",
   },
   layout: {
-    gap: "1.6rem",
-    padding: "1.6rem",
-    borderRadius: ".8rem",
+    gap: "1rem",
+    padding: "1rem",
+    borderRadius: ".5rem",
   },
 };
 
-export const ThemeContext = createContext(INITIAL_STATE);
+const SCREEN = {} as Screen;
+
+export const ThemeContext = createContext({ ...INITIAL_STATE, ...SCREEN });

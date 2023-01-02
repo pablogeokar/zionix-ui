@@ -2,7 +2,7 @@
   position: relative;
   display: flex;
   align-items: center;
-  gap: var(--gap);
+  gap: calc(var(--gap) / 2);
 }
 
 .text--primary {

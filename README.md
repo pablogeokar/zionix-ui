@@ -44,16 +44,17 @@ root: {
   --accent: #ff5252;
   --lightGray: #bbbbbb;
 
-  --text-xsmall: 1rem;
-  --text-small: 1.2rem;
-  --text-normal: 1.6rem;
-  --text-large: 2.1rem;
-  --text-xlarge: 3.2rem;
-  --text-xxlarge: 4rem;
+  --size-300: 0.75rem;
+  --size-400: 1rem;
+  --size-500: 1.33rem;
+  --size-600: 1.77rem;
+  --size-700: 2.36rem;
+  --size-800: 3.15rem;
+  --size-900: 4.2rem;
 
-  --gap: 1.6rem;
-  --padding: 1.6rem;
-  --borderRadius: 0.8rem;
+  --gap: 1rem;
+  --padding: 1rem;
+  --borderRadius: .5rem;
 }
 ```
 
@@ -74,7 +75,7 @@ console.log(theme.colors.primary);
 ### `Text` Component
 
 ```js
-  <Text level={1} primary>Typografy</Text>
+  <Text level={1} primary >Typography</Text>
   <Text level={2} secondary>Text h2 element text</Text>
   <Text level={3} accent>Text h3 element text</Text>
   <Text>Simple span element text</Text>

@@ -13,26 +13,22 @@ const TextSizes = {
 
 
 export interface TextProps {
-  size?: keyof typeof TextSizes;
   children?: React.ReactNode;
   level?: 1 | 2 | 3 | 4 | 5 | 6;
-  fontWeight?: 100 | 200 | 300 | 400 | 500 | 600 | 700 | 800 | 900 | "bold";
-  lineHeight?: string | number;
+  fontWeight?: 100 | 200 | 300 | 400 | 500 | 600 | 700 | 800 | 900
   color?: string
   primary?: boolean
   secondary?: boolean
   accent?: boolean
   onClick?: () => void
   style?: {}
-  className?: string
+  className?: {}
 }
 
 export default function Text({
-  size,
   children,
   level,
   fontWeight,
-  lineHeight,
   style,
   className,
   primary,
@@ -43,25 +39,25 @@ export default function Text({
 }: TextProps) {
   const styles = {
     span: {
-      color: color, fontSize: TextSizes[size || 'normal'], fontWeight: fontWeight || 400, lineHeight: lineHeight || 1.5
+      color: color, fontWeight: fontWeight ? fontWeight : 400
     },
     h1: {
-      color: color, fontSize: TextSizes[size || 'xxlarge'], fontWeight: fontWeight || 600, lineHeight: lineHeight || 1
+      color: color, fontWeight: fontWeight ? fontWeight : 800
     },
     h2: {
-      color: color, fontSize: TextSizes[size || 'xlarge'], fontWeight: fontWeight || 500, lineHeight: lineHeight || 1.5
+      color: color, fontWeight: fontWeight ? fontWeight : 700
     },
     h3: {
-      color: color, fontSize: TextSizes[size || 'large'], fontWeight: fontWeight || 400, lineHeight: lineHeight || 1.5
+      color: color, fontWeight: fontWeight ? fontWeight : 500
     },
     h4: {
-      color: color, fontSize: TextSizes[size || 'normal'], fontWeight: fontWeight || 400, lineHeight: lineHeight || 1.5
+      color: color, fontWeight: fontWeight ? fontWeight : 400
     },
     h5: {
-      color: color, fontSize: TextSizes[size || 'small'], fontWeight: fontWeight || 500, lineHeight: lineHeight || 1.5
+      color: color, fontWeight: fontWeight ? fontWeight : 400
     },
     h6: {
-      color: color, fontSize: TextSizes[size || 'xsmall'], fontWeight: fontWeight || 600, lineHeight: lineHeight || 1.5
+      color: color, fontWeight: fontWeight ? fontWeight : 400
     }
   };
   return (
