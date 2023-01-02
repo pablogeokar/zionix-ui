@@ -14,13 +14,22 @@ export const ThemeContextProvider = ({ children }: IProps) => {
           :root{
             --bg:           ${INITIAL_STATE.colors.body};
             --black:        ${INITIAL_STATE.colors.black};
+            --white:        ${INITIAL_STATE.colors.white};
             --primary:      ${INITIAL_STATE.colors.primary};
+            --secondary:    ${INITIAL_STATE.colors.secondary};
+            --accent:       ${INITIAL_STATE.colors.accent};
+            --lightGray:    ${INITIAL_STATE.colors.lightGray};
+
             --text-xsmall:  ${INITIAL_STATE.fontSizes.xsmall};
             --text-small:   ${INITIAL_STATE.fontSizes.small};
             --text-normal:  ${INITIAL_STATE.fontSizes.normal};
             --text-large:   ${INITIAL_STATE.fontSizes.large};
             --text-xlarge:  ${INITIAL_STATE.fontSizes.xlarge};
             --text-xxlarge: ${INITIAL_STATE.fontSizes.xxlarge};
+
+            --gap:          ${INITIAL_STATE.layout.gap};
+            --padding:      ${INITIAL_STATE.layout.padding};
+            --borderRadius: ${INITIAL_STATE.layout.borderRadius};
           }
           html {
             box-sizing: border-box;

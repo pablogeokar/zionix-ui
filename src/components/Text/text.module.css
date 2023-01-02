@@ -1,0 +1,18 @@
+.text {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: var(--gap);
+}
+
+.text--primary {
+  color: var(--primary);
+}
+
+.text--seconday {
+  color: var(--secondary);
+}
+
+.text--accent {
+  color: var(--accent);
+}

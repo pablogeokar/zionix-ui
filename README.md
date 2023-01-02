@@ -25,14 +25,50 @@ import { ThemeContextProvider, ThemeFont } from "@zionix/ui";
 </>;
 ```
 
-## Component `Text`
+### Global vars css
+
+These are the global variables used by @zionix/ui and customize your own components:
+
+```css
+root: {
+  --bg: #f1f2f6;
+  --black: #333333;
+  --white: #ffffff;
+  --primary: #227093;
+  --secondary: #2c2c54;
+  --accent: #ff5252;
+  --lightGray: #bbbbbb;
+
+  --text-xsmall: 1rem;
+  --text-small: 1.2rem;
+  --text-normal: 1.6rem;
+  --text-large: 2.1rem;
+  --text-xlarge: 3.2rem;
+  --text-xxlarge: 4rem;
+
+  --gap: 1.6rem;
+  --padding: 1.6rem;
+  --borderRadius: 0.8rem;
+}
+```
+
+### Component `Text`
 
 ```js
-  <Text level={1} fontWeight={700}>Text Style h1</Text>
-  <Text level={2} lineHeight={1.6}>Text Style h2</Text>
-  <Text level={3} size="xlarge">Text Style h3</Text>
-  <Text>Text span</Text>
-  <Text level={4}>Text Style h4</Text>
-  <Text level={5}>Text Style h5</Text>
-  <Text level={6}>Text Style h1</Text>
+  <Text level={1} primary>Typografy</Text>
+  <Text level={2} secondary>Text h2 element text</Text>
+  <Text level={3} accent>Text h3 element text</Text>
+  <Text>Simple span element text</Text>
+  <Text level={4} color='var(--lightGray)'>Text h4 element text</Text>
+  <Text level={5}>Text h5 element text</Text>
+  <Text level={6}>Text h6 element text</Text>
+```
+
+### Component `Box`
+
+```js
+<Box>
+  <Text level={1}>Hello, </Text>
+  <Text>This is a simple box</Text>
+</Box>
 ```
