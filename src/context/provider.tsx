@@ -132,9 +132,8 @@ export const ThemeContextProvider = ({ children }: IProps) => {
             animation-iteration-count: 1 !important;
             transition-duration: 0.01ms !important;
             scroll-behavior: auto !important;
-          }import { Theme } from './../types/theme.d';
-
-
+          }
+          
           button{
             cursor: pointer;
           }
