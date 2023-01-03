@@ -3,7 +3,7 @@
 
 # Zionix-ui
 
-A collection of ready-to-use components based on pure clean css modules (🚧is under Construction 🚧)
+A collection of ready-to-use components based on pure clean css modules 🚧 is under Construction!
 
 🇧🇷 Alô galera do Brasil, esta biblioteca ainda está em construção, caso alguém queira ajudar é só me gritar 😀
 
@@ -30,9 +30,36 @@ import { ThemeContextProvider, ThemeFont } from "@zionix/ui";
 </>;
 ```
 
+Using the example above the default theme will be applied, to add your custom theme, our library also allows theme customization.
+
+🇧🇷 Exemplo de como personalizar seu próprio tema
+
+```js
+import { ThemeContextProvider, ThemeFont, ThemeType } from "@zionix/ui";
+
+const theme: ThemeType = {
+  colors: {
+    body: "#f5f5f5",
+    black: "#333333",
+    white: "#ffffff",
+    primary: "#6A5ACD",
+    secondary: "#B8860B",
+    accent: "#ff5252",
+    lightGray: "#bbbbbb"
+  },
+};
+
+<>
+  <ThemeFont />
+  <ThemeContextProvider theme={theme}>
+    <Component {...pageProps} />
+  </ThemeContextProvider>
+</>;
+```
+
 ### Global vars css
 
-These are the global variables used by @zionix/ui and customize your own components:
+These are the global variables used by @zionix/ui and customize your own css components:
 
 ```css
 root: {
@@ -54,7 +81,7 @@ root: {
 
   --gap: 1rem;
   --padding: 1rem;
-  --borderRadius: .5rem;
+  --borderRadius: 0.5rem;
 }
 ```
 
@@ -62,11 +89,10 @@ root: {
 
 You can access theme variables through useThemeContext, the sky is the limit on your creativity to build your own derived components.
 
-🇧🇷 Você pode acessar as variáveis do tema através do  useThemeContext, o céu é o limite da sua criatividade para construir seus próprios componentes derivados.
+🇧🇷 Você pode acessar as variáveis do tema através do useThemeContext, o céu é o limite da sua criatividade para construir seus próprios componentes derivados.
 
 ```js
 import { useThemeContext } from "@zionix/ui";
-
 
 const theme = useThemeContext();
 console.log(theme.colors.primary);
@@ -84,11 +110,21 @@ console.log(theme.colors.primary);
   <Text level={6}>Text h6 element text</Text>
 ```
 
+### `Input` Component
+```js
+  <Input label="Name" />
+```
+
 ### `Box` Component
 
 ```js
-<Box>
-  <Text level={1}>Hello, </Text>
-  <Text>This is a simple box</Text>
-</Box>
+  <Box.Container>
+    <Text level={1}>Hello, </Text>
+    <Box.Row>
+      <Input label="Name" />
+      <Input label="Last name" />
+    </Box.Row>
+      <Input label="E-mail" type='email' />
+  </Box.Container >
 ```
+Calm down guys, I'm still creating the components, I'm working alone and I can only work in the library in my spare time :D

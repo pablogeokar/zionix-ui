@@ -14,13 +14,11 @@ export function Container(props: BoxProps) {
 export function Row(props: BoxProps) {
   const theme = useThemeContext();
 
-  /*
-  useEffect(() => {
-    console.log('Mudou o tamanho da tela')
-  }, [theme.screen.height, theme.screen.height])
-  */
-
   return <div {...props} className={`${css['row']} ${theme.screen.width <= 480 ? css['row--mobile'] : ''}`}>{props.children}</div>
+}
+
+export function Column(props: BoxProps) {
+  return <div {...props} className={css['column']}>{props.children}</div>
 }
 
 

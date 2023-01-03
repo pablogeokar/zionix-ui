@@ -1,0 +1,29 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  flex: 1;
+  gap: .5rem;
+  width: 100%;
+}
+
+.input {
+  width: 100%;
+  border: solid 1px var(--lightGray);
+  padding: 0.5rem 1rem;
+  border-radius: var(--borderRadius);
+  color: var(--black);
+  background: var(--white);
+}
+
+.input::placeholder {
+  opacity: 0.8;
+}
+
+.input:focus {
+  border: solid 1px var(--primary);
+}
+
+.input:hover {
+  border: solid 1px var(--primary);
+}

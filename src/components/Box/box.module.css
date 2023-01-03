@@ -8,6 +8,13 @@
   box-shadow: 0 0 10px 0 rgba(50, 50, 50, 0.2);
 }
 
+.column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: var(--gap, 1rem);
+}
+
 .row {
   display: flex;
   align-items: center;
