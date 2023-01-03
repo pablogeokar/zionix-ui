@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react"
-import { ThemeContext, INITIAL_STATE } from "./context"
+import { ThemeContext } from "./context"
 
 import { Screen } from "../types/screen"
+import { Theme } from "./context"
 
 interface IProps {
   children: React.ReactNode
@@ -9,8 +10,35 @@ interface IProps {
 
 export const ThemeContextProvider = ({ children }: IProps) => {
 
+  const DEFAULT_STATES: Theme = {
+    colors: {
+      body: "#f1f2f6",
+      black: "#333333",
+      white: "#ffffff",
+      primary: "#227093",
+      secondary: "#2c2c54",
+      accent: "#ff5252",
+      lightGray: "#bbbbbb",
+    },
+    fontSizes: {
+      size300: "0.75rem",
+      size400: "1rem",
+      size500: "1.33rem",
+      size600: "1.77rem",
+      size700: "2.36rem",
+      size800: "3.15rem",
+      size900: "4.2rem",
+    },
+    layout: {
+      gap: "1rem",
+      padding: "1rem",
+      borderRadius: ".5rem",
+    },
+  };
 
   const [SCREEN, setSCREEN] = useState<Screen>({ screen: { width: 0, height: 0 } });
+
+  const [THEME, setTHEME] = useState<Theme>({} as Theme);
 
   useEffect(() => {
     function handleResize() {
@@ -31,29 +59,29 @@ export const ThemeContextProvider = ({ children }: IProps) => {
 
 
   return (
-    <ThemeContext.Provider value={{ ...INITIAL_STATE, ...SCREEN }}>
+    <ThemeContext.Provider value={{ ...DEFAULT_STATES, ...SCREEN, theme: THEME }}>
       <style type="text/css">
         {`
           :root{
-            --bg:           ${INITIAL_STATE.colors.body};
-            --black:        ${INITIAL_STATE.colors.black};
-            --white:        ${INITIAL_STATE.colors.white};
-            --primary:      ${INITIAL_STATE.colors.primary};
-            --secondary:    ${INITIAL_STATE.colors.secondary};
-            --accent:       ${INITIAL_STATE.colors.accent};
-            --lightGray:    ${INITIAL_STATE.colors.lightGray};
+            --bg:           ${DEFAULT_STATES.colors.body};
+            --black:        ${DEFAULT_STATES.colors.black};
+            --white:        ${DEFAULT_STATES.colors.white};
+            --primary:      ${DEFAULT_STATES.colors.primary};
+            --secondary:    ${DEFAULT_STATES.colors.secondary};
+            --accent:       ${DEFAULT_STATES.colors.accent};
+            --lightGray:    ${DEFAULT_STATES.colors.lightGray};
 
-            --size-300: ${INITIAL_STATE.fontSizes.size300};
-            --size-400: ${INITIAL_STATE.fontSizes.size400};
-            --size-500: ${INITIAL_STATE.fontSizes.size500};
-            --size-600: ${INITIAL_STATE.fontSizes.size600};
-            --size-700: ${INITIAL_STATE.fontSizes.size700};
-            --size-800: ${INITIAL_STATE.fontSizes.size800};
-            --size-900: ${INITIAL_STATE.fontSizes.size900};
+            --size-300: ${DEFAULT_STATES.fontSizes.size300};
+            --size-400: ${DEFAULT_STATES.fontSizes.size400};
+            --size-500: ${DEFAULT_STATES.fontSizes.size500};
+            --size-600: ${DEFAULT_STATES.fontSizes.size600};
+            --size-700: ${DEFAULT_STATES.fontSizes.size700};
+            --size-800: ${DEFAULT_STATES.fontSizes.size800};
+            --size-900: ${DEFAULT_STATES.fontSizes.size900};
 
-            --gap:          ${INITIAL_STATE.layout.gap};
-            --padding:      ${INITIAL_STATE.layout.padding};
-            --borderRadius: ${INITIAL_STATE.layout.borderRadius};
+            --gap:          ${DEFAULT_STATES.layout.gap};
+            --padding:      ${DEFAULT_STATES.layout.padding};
+            --borderRadius: ${DEFAULT_STATES.layout.borderRadius};
           }
 
           *,
@@ -78,8 +106,8 @@ export const ThemeContextProvider = ({ children }: IProps) => {
             min-height: 100vh;
             text-rendering: optimizeSpeed;
             line-height: 1.5;
-            background: ${INITIAL_STATE.colors.body};            
-            color: ${INITIAL_STATE.colors.black};            
+            background: ${DEFAULT_STATES.colors.body};            
+            color: ${DEFAULT_STATES.colors.black};            
           }
 
           img,
@@ -104,7 +132,8 @@ export const ThemeContextProvider = ({ children }: IProps) => {
             animation-iteration-count: 1 !important;
             transition-duration: 0.01ms !important;
             scroll-behavior: auto !important;
-          }
+          }import { Theme } from './../types/theme.d';
+
 
           button{
             cursor: pointer;
@@ -124,16 +153,16 @@ export const ThemeContextProvider = ({ children }: IProps) => {
           h1 { font-weight: 800; }
 
           h1 {
-            font-size: ${INITIAL_STATE.fontSizes.size700};         
+            font-size: ${DEFAULT_STATES.fontSizes.size700};         
           }          
 
           h2 {
-            font-size: ${INITIAL_STATE.fontSizes.size600};
+            font-size: ${DEFAULT_STATES.fontSizes.size600};
             font-weight: 700;
           }
 
           h3 {
-            font-size: ${INITIAL_STATE.fontSizes.size500};
+            font-size: ${DEFAULT_STATES.fontSizes.size500};
             font-weight: 500;
           }
           h4, h5, h6{
