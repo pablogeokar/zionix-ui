@@ -1,6 +1,6 @@
 {
   "name": "@zionix/ui",
-  "version": "0.2.59",
+  "version": "0.2.60",
   "description": "A collection of ready-to-use components ui/ux from react",
   "repository": "https://github.com/pablogeokar/zionix-ui.git",
   "author": "Pablo George <pablogeokar@hotmail.com>",
@@ -43,7 +43,11 @@
     "access": "public"
   },
   "peerDependencies": {
-    "react": ">=18.2.0",
-    "react-dom": ">=18.2.0"
+    "react": ">=16",
+    "react-dom": ">=16"
+  },
+  "dependencies": {
+    "phosphor-react": "^1.4.1",
+    "tslib": "^2.4.1"
   }
 }
