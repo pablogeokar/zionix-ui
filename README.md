@@ -27,7 +27,7 @@ import { ThemeContextProvider, ThemeFont } from "@zionix/ui";
   <ThemeContextProvider>
     <Component {...pageProps} />
   </ThemeContextProvider>
-</>;
+</>
 ```
 
 Using the example above the default theme will be applied, to add your custom theme, our library also allows theme customization.
@@ -54,7 +54,7 @@ const theme: ThemeType = {
   <ThemeContextProvider theme={theme}>
     <Component {...pageProps} />
   </ThemeContextProvider>
-</>;
+</>
 ```
 
 ### Global vars css

@@ -5,6 +5,7 @@
   "repository": "https://github.com/pablogeokar/zionix-ui.git",
   "author": "Pablo George <pablogeokar@hotmail.com>",
   "license": "MIT",
+  "homepage": "https://zionix-ui.vercel.app/",
   "main": "dist/cjs/index.ts",
   "module": "dist/esm/index.ts",
   "files": [
