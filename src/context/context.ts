@@ -3,13 +3,16 @@ import { Screen } from "../types/screen";
 
 export interface Theme {
   colors?: {
-    body?: string;
+    accent?: string;
     black?: string;
-    white?: string;
+    body?: string;
+    error?: string;
+    lightGray?: string;
     primary?: string;
     secondary?: string;
-    accent?: string;
-    lightGray?: string;
+    success?: string;
+    warning?: string;
+    white?: string;
   };
   fontSizes?: {
     size300?: string;
@@ -21,22 +24,25 @@ export interface Theme {
     size900?: string;
   };
   layout?: {
+    borderRadius?: string;
     gap?: string;
     padding?: string;
-    borderRadius?: string;
   };
 }
 
 // Carrega todas as constantes padrão que são utilizadas no desenvolvimento dos componentes
 export const DEFAULT_STATES: Theme = {
   colors: {
-    body: "#f1f2f6",
+    accent: "#f72585",
     black: "#333333",
-    white: "#ffffff",
-    primary: "#227093",
-    secondary: "#2c2c54",
-    accent: "#ff5252",
+    body: "#f5f5f5",
+    error: "#D32F2F",
     lightGray: "#bbbbbb",
+    primary: "#0288D1",
+    secondary: "#616161",
+    success: "#689F38",
+    warning: "#FBC02D",
+    white: "#ffffff",
   },
   fontSizes: {
     size300: "0.75rem",
@@ -48,9 +54,9 @@ export const DEFAULT_STATES: Theme = {
     size900: "4.2rem",
   },
   layout: {
+    borderRadius: ".5rem",
     gap: "1rem",
     padding: "1rem",
-    borderRadius: ".5rem",
   },
 };
 

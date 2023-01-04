@@ -5,6 +5,7 @@
   flex: 1;
   gap: .5rem;
   width: 100%;
+  max-width: 450px;
 }
 
 .input {

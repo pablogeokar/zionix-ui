@@ -45,7 +45,7 @@ const theme: ThemeType = {
     primary: "#6A5ACD",
     secondary: "#B8860B",
     accent: "#ff5252",
-    lightGray: "#bbbbbb"
+    lightGray: "#bbbbbb",
   },
 };
 
@@ -63,13 +63,16 @@ These are the global variables used by @zionix/ui and customize your own css com
 
 ```css
 root: {
-  --bg: #f1f2f6;
+  --accent: #f72585;
+  --bg: #f5f5f5;
   --black: #333333;
-  --white: #ffffff;
-  --primary: #227093;
-  --secondary: #2c2c54;
-  --accent: #ff5252;
+  --error: #d32f2f;
   --lightGray: #bbbbbb;
+  --primary: #0288d1;
+  --secondary: #616161;
+  --success: #689f38;
+  --warning: #fbc02d;
+  --white: #ffffff;
 
   --size-300: 0.75rem;
   --size-400: 1rem;
@@ -79,9 +82,9 @@ root: {
   --size-800: 3.15rem;
   --size-900: 4.2rem;
 
+  --borderRadius: 0.5rem;
   --gap: 1rem;
   --padding: 1rem;
-  --borderRadius: 0.5rem;
 }
 ```
 
@@ -110,21 +113,49 @@ console.log(theme.colors.primary);
   <Text level={6}>Text h6 element text</Text>
 ```
 
-### `Input` Component
+### `Button` Component
+
+Normal
+
 ```js
-  <Input label="Name" />
+    <Button>Login</Button>
+    <Button isPrimary>Login</Button>
+    <Button isSecondary>Login</Button>
+    <Button isAccent>Login</Button>
+    <Button isSuccess>Login</Button>
+    <Button isWarning>Login</Button>
+    <Button isError>Login</Button>
+```
+
+Background transparent with inverted colors
+
+```js
+    <Button isInverted>Login</Button>
+    <Button isPrimary isInverted>Login</Button>
+    <Button isSecondary isInverted>Login</Button>
+    <Button isAccent isInverted>Login</Button>
+    <Button isSuccess isInverted>Login</Button>
+    <Button isWarning isInverted>Login</Button>
+    <Button isError isInverted>Login</Button>
+```
+
+### `Input` Component
+
+```js
+<Input label="Name" />
 ```
 
 ### `Box` Component
 
 ```js
-  <Box.Container>
-    <Text level={1}>Hello, </Text>
-    <Box.Row>
-      <Input label="Name" />
-      <Input label="Last name" />
-    </Box.Row>
-      <Input label="E-mail" type='email' />
-  </Box.Container >
+<Box.Container>
+  <Text level={1}>Hello, </Text>
+  <Box.Row>
+    <Input label="Name" />
+    <Input label="Last name" />
+  </Box.Row>
+  <Input label="E-mail" type="email" />
+</Box.Container>
 ```
+
 Calm down guys, I'm still creating the components, I'm working alone and I can only work in the library in my spare time :D

@@ -42,13 +42,16 @@ export const ThemeContextProvider = ({ children, theme }: IProps) => {
       <style type="text/css">
         {`
           :root{
+            --accent:       ${USER_THEME.colors?.accent || DEFAULT_STATES.colors?.accent};
             --bg:           ${USER_THEME.colors?.body || DEFAULT_STATES.colors?.body};
             --black:        ${USER_THEME.colors?.black || DEFAULT_STATES.colors?.black};
-            --white:        ${USER_THEME.colors?.white || DEFAULT_STATES.colors?.white};
+            --error:        ${USER_THEME.colors?.error || DEFAULT_STATES.colors?.error};
+            --lightGray:    ${USER_THEME.colors?.lightGray || DEFAULT_STATES.colors?.lightGray};
             --primary:      ${USER_THEME.colors?.primary || DEFAULT_STATES.colors?.primary};
             --secondary:    ${USER_THEME.colors?.secondary || DEFAULT_STATES.colors?.secondary};
-            --accent:       ${USER_THEME.colors?.accent || DEFAULT_STATES.colors?.accent};
-            --lightGray:    ${USER_THEME.colors?.lightGray || DEFAULT_STATES.colors?.lightGray};
+            --success:      ${USER_THEME.colors?.success || DEFAULT_STATES.colors?.success};
+            --warning:      ${USER_THEME.colors?.warning || DEFAULT_STATES.colors?.warning};
+            --white:        ${USER_THEME.colors?.white || DEFAULT_STATES.colors?.white};
 
             --size-300: ${USER_THEME.fontSizes?.size300 || DEFAULT_STATES.fontSizes?.size300};
             --size-400: ${USER_THEME.fontSizes?.size400 || DEFAULT_STATES.fontSizes?.size400};
@@ -58,9 +61,9 @@ export const ThemeContextProvider = ({ children, theme }: IProps) => {
             --size-800: ${USER_THEME.fontSizes?.size800 || DEFAULT_STATES.fontSizes?.size800};
             --size-900: ${USER_THEME.fontSizes?.size900 || DEFAULT_STATES.fontSizes?.size900};
 
+            --borderRadius: ${USER_THEME.layout?.borderRadius || DEFAULT_STATES.layout?.borderRadius};
             --gap:          ${USER_THEME.layout?.gap || DEFAULT_STATES.layout?.gap};
             --padding:      ${USER_THEME.layout?.padding || DEFAULT_STATES.layout?.padding};
-            --borderRadius: ${USER_THEME.layout?.borderRadius || DEFAULT_STATES.layout?.borderRadius};
           }
 
           *,
