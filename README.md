@@ -23,7 +23,7 @@ o ThemeFont é opcional, caso você já tenha sua própria rotina de carregament
 import { ThemeContextProvider, ThemeFont } from "@zionix/ui";
 
 <>
-  <ThemeFont />
+  <ThemeFont font="Poppins" />
   <ThemeContextProvider>
     <Component {...pageProps} />
   </ThemeContextProvider>
@@ -50,7 +50,7 @@ const theme: ThemeType = {
 };
 
 <>
-  <ThemeFont />
+  <ThemeFont font="Poppins" />
   <ThemeContextProvider theme={theme}>
     <Component {...pageProps} />
   </ThemeContextProvider>
