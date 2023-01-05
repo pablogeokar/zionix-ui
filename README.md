@@ -27,7 +27,7 @@ import { ThemeContextProvider, ThemeFont } from "@zionix/ui";
   <ThemeContextProvider>
     <Component {...pageProps} />
   </ThemeContextProvider>
-</>
+</>;
 ```
 
 Using the example above the default theme will be applied, to add your custom theme, our library also allows theme customization.
@@ -54,7 +54,7 @@ const theme: ThemeType = {
   <ThemeContextProvider theme={theme}>
     <Component {...pageProps} />
   </ThemeContextProvider>
-</>
+</>;
 ```
 
 ### Global vars css
@@ -137,6 +137,36 @@ Background transparent with inverted colors
     <Button isSuccess isInverted>Login</Button>
     <Button isWarning isInverted>Login</Button>
     <Button isError isInverted>Login</Button>
+```
+
+### `Icon` Component
+
+Built-in [phosphor-icons](https://https://phosphoricons.com) icon pack, to see the full list of icons, go to the [phosphor-icons](https://https://phosphoricons.com) website and search for the icon you need.
+
+```js
+    <Icon icon="Alarm" size={48} />
+    <Icon icon="Alien" size={48} />
+    <Icon icon="Dog" size={48} />
+    <Icon icon="House" size={48} />
+    <Icon icon="Pencil" size={48} />
+    <Icon icon="User" size={48} />
+    <Icon icon="Users" size={48} />
+
+    <Icon icon="Alarm" weight="duotone" />
+    <Icon icon="Alien" weight="duotone" />
+    <Icon icon="Dog" weight="duotone" />
+    <Icon icon="House" weight="duotone" />
+    <Icon icon="Pencil" weight="duotone" />
+    <Icon icon="User" weight="duotone" />
+    <Icon icon="Users" weight="duotone" />
+
+    <Icon icon="Alarm" weight="bold" />
+    <Icon icon="Alien" weight="bold" />
+    <Icon icon="Dog" weight="bold" />
+    <Icon icon="House" weight="bold" />
+    <Icon icon="Pencil" weight="bold" />
+    <Icon icon="User" weight="bold" />
+    <Icon icon="Users" weight="bold" />
 ```
 
 ### `Input` Component
