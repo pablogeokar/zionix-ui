@@ -36,8 +36,8 @@ export const ThemeContextProvider = ({ children, theme }: IProps) => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-
   return (
+
     <ThemeContext.Provider value={{ ...DEFAULT_STATES, ...SCREEN }}>
       <style type="text/css">
         {`
