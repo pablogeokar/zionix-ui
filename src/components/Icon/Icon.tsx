@@ -12,8 +12,7 @@ export default function Icon({ icon, weight = 'thin', size = 28 }: IconProps) {
 
   return (
     <>
-      PhosphorIcon && <PhosphorIcon size={size} weight={weight} />
+      {PhosphorIcon && <PhosphorIcon size={size} weight={weight} />}
     </>
   )
-
 }

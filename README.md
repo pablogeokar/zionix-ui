@@ -119,24 +119,24 @@ Normal
 
 ```js
     <Button>Login</Button>
-    <Button isPrimary>Login</Button>
-    <Button isSecondary>Login</Button>
-    <Button isAccent>Login</Button>
-    <Button isSuccess>Login</Button>
-    <Button isWarning>Login</Button>
-    <Button isError>Login</Button>
+    <Button btnPrimary><Icon icon='LockKeyOpen' />Sign In</Button>
+    <Button btnSecondary><Icon icon='LockKeyOpen' />Login</Button>
+    <Button btnAccent>Login</Button>
+    <Button btnSuccess>Login</Button>
+    <Button btnWarning>Login</Button>
+    <Button btnError>Login</Button>
 ```
 
 Background transparent with inverted colors
 
 ```js
-    <Button isInverted>Login</Button>
-    <Button isPrimary isInverted>Login</Button>
-    <Button isSecondary isInverted>Login</Button>
-    <Button isAccent isInverted>Login</Button>
-    <Button isSuccess isInverted>Login</Button>
-    <Button isWarning isInverted>Login</Button>
-    <Button isError isInverted>Login</Button>
+    <Button btnInverted>Login</Button>
+    <Button btnPrimary btnInverted><Icon icon='LockKeyOpen' />Sign In</Button>    
+    <Button btnSecondary btnInverted><Icon icon='LockKeyOpen' />Login</Button>
+    <Button btnAccent btnInverted>Login</Button>
+    <Button btnSuccess btnInverted>Login</Button>
+    <Button btnWarning btnInverted>Login</Button>
+    <Button btnError btnInverted>Login</Button>
 ```
 
 ### `Icon` Component
@@ -179,13 +179,28 @@ Built-in [phosphor-icons](https://https://phosphoricons.com) icon pack, to see t
 
 ```js
 <Box.Container>
-  <Text level={1}>Hello, </Text>
-  <Box.Row>
-    <Input label="Name" />
-    <Input label="Last name" />
-  </Box.Row>
-  <Input label="E-mail" type="email" />
-</Box.Container>
+
+<Text level={1} secondary>Hello, </Text>
+
+<Box.Row>
+  <Input label="Name" />
+  <Input label="Last name" />
+</Box.Row>
+
+<Input label="E-mail" type='email' />
+
+<Box.Row>
+  <Button btnPrimary btnInverted btnBorderNone>
+    <Icon icon='User' />
+    Join now
+  </Button>
+  <Button btnPrimary>
+    <Icon icon='LockKeyOpen' />
+    Sign In
+  </Button>
+</Box.Row>
+
+</Box.Container >
 ```
 
 Calm down guys, I'm still creating the components, I'm working alone and I can only work in the library in my spare time :D
