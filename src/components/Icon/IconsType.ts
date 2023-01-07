@@ -1,5 +1,5 @@
 export interface IconsType {
-  icon:
+  iconName:
     | "Activity"
     | "AddressBook"
     | "Airplane"

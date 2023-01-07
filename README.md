@@ -1,5 +1,8 @@
+<div style="text-align: center;">
 ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
 ![Next JS](https://img.shields.io/badge/Next-black?style=for-the-badge&logo=next.js&logoColor=white)
+!(https://img.shields.io/website?down_message=offline&label=ZIONIX%20docs&up_message=online&url=https%3A%2F%2Fzionix-ui.vercel.app%2F)
+</div>
 
 # Zionix-ui
 
@@ -131,7 +134,7 @@ Background transparent with inverted colors
 
 ```js
     <Button btnInverted>Login</Button>
-    <Button btnPrimary btnInverted><Icon icon='LockKeyOpen' />Sign In</Button>    
+    <Button btnPrimary btnInverted><Icon icon='LockKeyOpen' />Sign In</Button>
     <Button btnSecondary btnInverted><Icon icon='LockKeyOpen' />Login</Button>
     <Button btnAccent btnInverted>Login</Button>
     <Button btnSuccess btnInverted>Login</Button>
@@ -179,28 +182,28 @@ Built-in [phosphor-icons](https://https://phosphoricons.com) icon pack, to see t
 
 ```js
 <Box.Container>
+  <Text level={1} secondary>
+    Hello,{" "}
+  </Text>
 
-<Text level={1} secondary>Hello, </Text>
+  <Box.Row>
+    <Input label="Name" />
+    <Input label="Last name" />
+  </Box.Row>
 
-<Box.Row>
-  <Input label="Name" />
-  <Input label="Last name" />
-</Box.Row>
+  <Input label="E-mail" type="email" />
 
-<Input label="E-mail" type='email' />
-
-<Box.Row>
-  <Button btnPrimary btnInverted btnBorderNone>
-    <Icon icon='User' />
-    Join now
-  </Button>
-  <Button btnPrimary>
-    <Icon icon='LockKeyOpen' />
-    Sign In
-  </Button>
-</Box.Row>
-
-</Box.Container >
+  <Box.Row>
+    <Button btnPrimary btnInverted btnBorderNone>
+      <Icon icon="User" />
+      Join now
+    </Button>
+    <Button btnPrimary>
+      <Icon icon="LockKeyOpen" />
+      Sign In
+    </Button>
+  </Box.Row>
+</Box.Container>
 ```
 
 Calm down guys, I'm still creating the components, I'm working alone and I can only work in the library in my spare time :D

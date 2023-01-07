@@ -6,9 +6,9 @@ interface IconProps extends IconsType {
   weight?: 'bold' | 'duotone' | 'fill' | 'light' | 'regular' | 'thin';
 }
 
-export default function Icon({ icon, weight = 'thin', size = 28 }: IconProps) {
+export default function Icon({ iconName, weight = 'thin', size = 28 }: IconProps) {
 
-  const PhosphorIcon = require(`../../../../phosphor-react`)[icon] || null;
+  const PhosphorIcon = require(`../../../../phosphor-react`)[iconName] || null;
 
   return (
     <>
