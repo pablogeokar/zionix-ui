@@ -14,19 +14,19 @@ export interface Theme {
     warning?: string;
     white?: string;
   };
-  fontSizes?: {
-    size300?: string;
-    size400?: string;
-    size500?: string;
-    size600?: string;
-    size700?: string;
-    size800?: string;
-    size900?: string;
-  };
   layout?: {
     borderRadius?: string;
     gap?: string;
     padding?: string;
+  };
+  sizes?: {
+    h1?: string;
+    h2?: string;
+    h3?: string;
+    h4?: string;
+    h5?: string;
+    h6?: string;
+    text?: string;
   };
 }
 
@@ -44,19 +44,19 @@ export const DEFAULT_STATES: Theme = {
     warning: "#FBC02D",
     white: "#ffffff",
   },
-  fontSizes: {
-    size300: "0.75rem",
-    size400: "1rem",
-    size500: "1.33rem",
-    size600: "1.77rem",
-    size700: "2.36rem",
-    size800: "3.15rem",
-    size900: "4.2rem",
-  },
   layout: {
-    borderRadius: ".5rem",
-    gap: "1rem",
-    padding: "1rem",
+    borderRadius: "0.8rem",
+    gap: "1.6rem",
+    padding: "1.6rem",
+  },
+  sizes: {
+    text: "clamp(1.4rem, 1.2vw, 1.6rem)",
+    h1: "clamp(3.6rem, 2.6vw, 4.2rem)",
+    h2: "clamp(2.882rem, 2.08vw, 3.4rem)",
+    h3: "clamp(2.1rem, 1.6vw, 2.7rem)",
+    h4: "clamp(1.6rem, 1.250vw, 2.1rem)",
+    h5: "clamp(1.2rem, 1vw, 1.5rem)",
+    h6: "clamp(.9rem, 0.7vw, 1.1rem)",
   },
 };
 

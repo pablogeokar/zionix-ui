@@ -2,6 +2,7 @@
 import React from 'react';
 import css from './text.module.css'
 
+/*
 const TextSizes = {
   xsmall: "var(--text-xsmall, 1rem)",
   small: "var(--text-small, 1.2rem)",
@@ -10,6 +11,7 @@ const TextSizes = {
   xlarge: "var(--text-xlarge, 3.2rem)",
   xxlarge: "var(--text-xxlarge, 4rem)",
 }
+*/
 
 
 export interface TextProps {

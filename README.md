@@ -26,11 +26,11 @@ o ThemeFont é opcional, caso você já tenha sua própria rotina de carregament
 import { ThemeContextProvider, ThemeFont } from "@zionix/ui";
 
 <>
-  <ThemeFont font="Poppins" />
+  <ThemeFont font="Poppins" /> {/*ThemeFont is optional*/}
   <ThemeContextProvider>
     <Component {...pageProps} />
   </ThemeContextProvider>
-</>;
+</>
 ```
 
 Using the example above the default theme will be applied, to add your custom theme, our library also allows theme customization.
@@ -52,12 +52,41 @@ const theme: ThemeType = {
   },
 };
 
+const themeWithFullOptions: ThemeType = {
+  colors: {
+    accent: "#f72585",
+    black: "#333333",
+    body: "#f5f5f5",
+    error: "#D32F2F",
+    lightGray: "#bbbbbb",
+    primary: "#0288D1",
+    secondary: "#616161",
+    success: "#689F38",
+    warning: "#FBC02D",
+    white: "#ffffff",
+  },
+  layout: {
+    borderRadius: "0.8rem",
+    gap: "1.6rem",
+    padding: "1.6rem",
+  },
+  sizes: {
+    text: "clamp(1.4rem, 1.2vw, 1.6rem)",
+    h1: "clamp(3.6rem, 2.6vw, 4.2rem)",
+    h2: "clamp(2.882rem, 2.08vw, 3.4rem)",
+    h3: "clamp(2.1rem, 1.6vw, 2.7rem)",
+    h4: "clamp(1.6rem, 1.250vw, 2.1rem)",
+    h5: "clamp(1.2rem, 1vw, 1.5rem)",
+    h6: "clamp(.9rem, 0.7vw, 1.1rem)",
+  },
+};
+
 <>
   <ThemeFont font="Poppins" />
   <ThemeContextProvider theme={theme}>
     <Component {...pageProps} />
   </ThemeContextProvider>
-</>;
+</>
 ```
 
 ### Global vars css
@@ -76,14 +105,6 @@ root: {
   --success: #689f38;
   --warning: #fbc02d;
   --white: #ffffff;
-
-  --size-300: 0.75rem;
-  --size-400: 1rem;
-  --size-500: 1.33rem;
-  --size-600: 1.77rem;
-  --size-700: 2.36rem;
-  --size-800: 3.15rem;
-  --size-900: 4.2rem;
 
   --borderRadius: 0.5rem;
   --gap: 1rem;
