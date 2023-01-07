@@ -1,17 +1,7 @@
-
 import React from 'react';
 import css from './text.module.css'
-
-/*
-const TextSizes = {
-  xsmall: "var(--text-xsmall, 1rem)",
-  small: "var(--text-small, 1.2rem)",
-  normal: "var(--text-normal, 1.6rem)",
-  large: "var(--text-large, 2.1rem)",
-  xlarge: "var(--text-xlarge, 3.2rem)",
-  xxlarge: "var(--text-xxlarge, 4rem)",
-}
-*/
+import { cssValidation } from '../../helpers'
+import { cssValidationProps } from '../../helpers/cssValidation';
 
 
 export interface TextProps {
@@ -39,18 +29,31 @@ export default function Text({
   color,
   onClick
 }: TextProps) {
+
+  const cssClasses = [
+    { name: css.text, validation: true },
+    { name: css['text--primary'], validation: primary === true },
+    { name: css['text--seconday'], validation: secondary === true },
+    { name: css['text--accent'], validation: accent === true },
+  ]
+
+  cssValidation(cssClasses)
+
+
+
+
   const styles = {
     span: {
       color: color, fontWeight: fontWeight ? fontWeight : 400
     },
     h1: {
-      color: color, fontWeight: fontWeight ? fontWeight : 800
+      color: color, fontWeight: fontWeight ? fontWeight : 400
     },
     h2: {
-      color: color, fontWeight: fontWeight ? fontWeight : 700
+      color: color, fontWeight: fontWeight ? fontWeight : 400
     },
     h3: {
-      color: color, fontWeight: fontWeight ? fontWeight : 500
+      color: color, fontWeight: fontWeight ? fontWeight : 400
     },
     h4: {
       color: color, fontWeight: fontWeight ? fontWeight : 400

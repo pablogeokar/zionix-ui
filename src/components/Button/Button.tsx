@@ -24,8 +24,8 @@ const ButtonWrapper = ({
   btnSuccess = false,
   btnBorderNone = false,
   ...ButtonProps }: ButtonProps) => {
-  function buttonClasses() {
 
+  function buttonClasses() {
     let objCSS = []
 
     if (btnInverted) {
@@ -50,7 +50,7 @@ const ButtonWrapper = ({
     }
     let cssString = ''
     objCSS.map(prop => cssString += `${prop} `)
-    return cssString;
+    return cssString.substring(0, cssString.length - 1);
   }
   return <button className={buttonClasses()} {...ButtonProps}>{ButtonProps.children}</button>
 }
