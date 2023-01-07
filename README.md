@@ -58,12 +58,17 @@ const themeWithFullOptions: ThemeType = {
     black: "#333333",
     body: "#f5f5f5",
     error: "#D32F2F",
-    lightGray: "#bbbbbb",
+    lightGray: "#c4c4c4",
     primary: "#0288D1",
     secondary: "#616161",
     success: "#689F38",
     warning: "#FBC02D",
     white: "#ffffff",
+  },
+  components: {
+    card: {
+      filter: "drop-shadow(0 5px 4px var(--lightGray))",
+    },
   },
   layout: {
     borderRadius: "0.8rem",
@@ -71,7 +76,7 @@ const themeWithFullOptions: ThemeType = {
     padding: "1.6rem",
   },
   sizes: {
-    text: "clamp(1.4rem, 1.2vw, 1.6rem)",
+    text: "clamp(1.6rem, 1.250vw, 1.6rem)",
     h1: "clamp(3.6rem, 2.6vw, 4.2rem)",
     h2: "clamp(2.882rem, 2.08vw, 3.4rem)",
     h3: "clamp(2.1rem, 1.6vw, 2.7rem)",
@@ -128,13 +133,15 @@ console.log(theme.colors.primary);
 ### `Text` Component
 
 ```js
-  <Text level={1} primary >Typography</Text>
-  <Text level={2} secondary>Text h2 element text</Text>
-  <Text level={3} accent>Text h3 element text</Text>
-  <Text>Simple span element text</Text>
-  <Text level={4} color='var(--lightGray)'>Text h4 element text</Text>
-  <Text level={5}>Text h5 element text</Text>
-  <Text level={6}>Text h6 element text</Text>
+    <Text level={1} fontWeight={800}>Typography h1</Text>
+    <Text level={1} primary>Typography h1</Text>
+    <Text level={2} secondary>Typography h2</Text>
+    <Text level={3} fontWeight={600}>Typography h3</Text>
+    <Text level={4} accent>Typography h4</Text>
+    <Text level={5}>Typography h5</Text>
+    <Text level={6} style={{color: 'var(--black)'}}>Typography h6</Text>
+    <Text secondary>Simple text with normal size</Text>
+    <Text>Simple text with normal size</Text>
 ```
 
 ### `Button` Component

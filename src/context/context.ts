@@ -60,7 +60,7 @@ export const DEFAULT_STATES: Theme = {
     padding: "1.6rem",
   },
   sizes: {
-    text: "clamp(1.4rem, 1.2vw, 1.6rem)",
+    text: "clamp(1.6rem, 1.250vw, 1.6rem)",
     h1: "clamp(3.6rem, 2.6vw, 4.2rem)",
     h2: "clamp(2.882rem, 2.08vw, 3.4rem)",
     h3: "clamp(2.1rem, 1.6vw, 2.7rem)",

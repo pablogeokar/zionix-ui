@@ -83,7 +83,7 @@ export const ThemeContextProvider = ({ children, theme }: IProps) => {
           }
 
           h1,h2,h3,h4,h5,h6 {            
-            margin: 0;
+            margin: 1.6rem 0;
           }
 
           h1 {
