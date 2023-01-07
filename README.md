@@ -25,12 +25,12 @@ o ThemeFont é opcional, caso você já tenha sua própria rotina de carregament
 ```js
 import { ThemeContextProvider, ThemeFont } from "@zionix/ui";
 
-<>
+
   <ThemeFont font="Poppins" /> {/*ThemeFont is optional*/}
   <ThemeContextProvider>
     <Component {...pageProps} />
   </ThemeContextProvider>
-</>
+
 ```
 
 Using the example above the default theme will be applied, to add your custom theme, our library also allows theme customization.
@@ -40,6 +40,7 @@ Using the example above the default theme will be applied, to add your custom th
 ```js
 import { ThemeContextProvider, ThemeFont, ThemeType } from "@zionix/ui";
 
+// Minimal Example
 const theme: ThemeType = {
   colors: {
     body: "#f5f5f5",
@@ -52,6 +53,7 @@ const theme: ThemeType = {
   },
 };
 
+// Full Example
 const themeWithFullOptions: ThemeType = {
   colors: {
     accent: "#f72585",
@@ -86,12 +88,12 @@ const themeWithFullOptions: ThemeType = {
   },
 };
 
-<>
+
   <ThemeFont font="Poppins" />
   <ThemeContextProvider theme={theme}>
     <Component {...pageProps} />
   </ThemeContextProvider>
-</>
+
 ```
 
 ### Global vars css
@@ -104,16 +106,17 @@ root: {
   --bg: #f5f5f5;
   --black: #333333;
   --error: #d32f2f;
-  --lightGray: #bbbbbb;
+  --lightGray: #c4c4c4;
   --primary: #0288d1;
   --secondary: #616161;
   --success: #689f38;
   --warning: #fbc02d;
   --white: #ffffff;
 
-  --borderRadius: 0.5rem;
-  --gap: 1rem;
-  --padding: 1rem;
+  --component-card--filter: drop-shadow(0 5px 4px var(--lightGray));
+  --borderRadius: 0.8rem;
+  --gap: 1.6rem;
+  --padding: 1.6rem;
 }
 ```
 
