@@ -45,7 +45,6 @@
     "access": "public"
   },
   "peerDependencies": {
-    "phosphor-react": "^1.4.1",
     "react": ">=16",
     "react-dom": ">=16"
   },
