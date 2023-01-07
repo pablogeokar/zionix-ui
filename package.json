@@ -23,6 +23,7 @@
   ],
   "scripts": {
     "build": "rollup -c",
+    "watch": "rollup -c --watch",
     "postversion": "rollup -c && git push && git push --tags && echo \"Successfully git released version!\""
   },
   "devDependencies": {

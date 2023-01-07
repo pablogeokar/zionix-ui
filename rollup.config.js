@@ -10,6 +10,10 @@ import pkg from "./package.json" assert { type: "json" };
 export default [
   {
     input: "src/index.ts",
+    watch: {
+      include: "./src/**",
+      clearScreen: false,
+    },
     output: [
       {
         file: pkg.main,
@@ -22,13 +26,13 @@ export default [
         sourcemap: true,
       },
     ],
-    plugins: [      
+    plugins: [
       resolve({ moduleDirectories: ["node_modules"] }),
       peerDepsExternal(),
       typescript({ tsconfig: "./tsconfig.json" }),
       commonjs(),
       postcss(),
-    ],    
+    ],
   },
   {
     input: "dist/esm/types/index.d.ts",

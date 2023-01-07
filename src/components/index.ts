@@ -1,4 +1,4 @@
-export * as Box from "./Box";
+export * as Card from "./Card";
 export { default as Button } from "./Button";
 export { default as Icon } from "./Icon";
 export { default as Input } from "./Input";

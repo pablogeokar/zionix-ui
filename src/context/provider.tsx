@@ -51,7 +51,10 @@ export const ThemeContextProvider = ({ children, theme }: IProps) => {
             --secondary:    ${USER.colors?.secondary || D.colors?.secondary};
             --success:      ${USER.colors?.success || D.colors?.success};
             --warning:      ${USER.colors?.warning || D.colors?.warning};
-            --white:        ${USER.colors?.white || D.colors?.white};            
+            --white:        ${USER.colors?.white || D.colors?.white};
+
+            /* Components vars*/
+            --component-card--filter: ${USER.components?.card?.filter || D.components?.card?.filter};
 
             --borderRadius: ${USER.layout?.borderRadius || D.layout?.borderRadius};
             --gap:          ${USER.layout?.gap || D.layout?.gap};
@@ -77,6 +80,10 @@ export const ThemeContextProvider = ({ children, theme }: IProps) => {
             font-weight: 400;
             background: ${USER.colors?.body || D.colors?.body};            
             color: ${USER.colors?.black || D.colors?.black};            
+          }
+
+          h1,h2,h3,h4,h5,h6 {            
+            margin: 0;
           }
 
           h1 {

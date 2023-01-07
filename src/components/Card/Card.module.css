@@ -1,0 +1,43 @@
+.card {
+  display: flex;
+  overflow: hidden;
+  flex-direction: column;
+  gap: var(--gap, 1.6rem);
+  padding: var(--padding, 1.6rem);
+  border-radius: var(--borderRadius, 0.8rem);
+  background: var(--white, #ffffff);
+  border: 1px solid var(--lightGray);
+}
+
+.card--shadow {
+  filter: var(--component-card--filter);
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  /*justify-content: center;*/
+  gap: var(--gap, 1.6rem);
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: var(--gap, 1.6rem);
+}
+
+.row--mobile {
+  flex-direction: column;
+  /*justify-content: center;*/
+  align-items: flex-start;
+}
+
+
+@media only screen and (max-width: 500px) {
+  .row {
+    flex-direction: column;
+    align-items: flex-start;
+    /*background-color: red;*/
+  }
+}

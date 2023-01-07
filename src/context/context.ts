@@ -14,6 +14,11 @@ export interface Theme {
     warning?: string;
     white?: string;
   };
+  components?: {
+    card?: {
+      filter?: string;
+    };
+  };
   layout?: {
     borderRadius?: string;
     gap?: string;
@@ -37,12 +42,17 @@ export const DEFAULT_STATES: Theme = {
     black: "#333333",
     body: "#f5f5f5",
     error: "#D32F2F",
-    lightGray: "#bbbbbb",
+    lightGray: "#c4c4c4",
     primary: "#0288D1",
     secondary: "#616161",
     success: "#689F38",
     warning: "#FBC02D",
     white: "#ffffff",
+  },
+  components: {
+    card: {
+      filter: "drop-shadow(0 5px 4px var(--lightGray))",
+    },
   },
   layout: {
     borderRadius: "0.8rem",
