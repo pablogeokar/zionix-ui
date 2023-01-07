@@ -1,8 +1,8 @@
-<div style="text-align: center;">
-![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
-![Next JS](https://img.shields.io/badge/Next-black?style=for-the-badge&logo=next.js&logoColor=white)
-!(https://img.shields.io/website?down_message=offline&label=ZIONIX%20docs&up_message=online&url=https%3A%2F%2Fzionix-ui.vercel.app%2F)
-</div>
+  <p align="center">
+     <img src="https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB" alt="ReactJs" />
+     <img src="https://img.shields.io/badge/Next-black?style=for-the-badge&logo=next.js&logoColor=white" alt="Nextjs compatible" />
+     <a href="https://zionix-ui.vercel.app"> <img src="https://img.shields.io/website?down_message=offline&label=ZIONIX%20docs&up_message=online&url=https%3A%2F%2Fzionix-ui.vercel.app%2F" alt="PRs welcome!" /></a>
+  </p>
 
 # Zionix-ui
 
