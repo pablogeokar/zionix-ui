@@ -1,6 +1,6 @@
 export interface cssValidationProps {
-  name: string;
-  validation: any;
+  name: string | any;
+  validation: boolean;
 }
 [];
 

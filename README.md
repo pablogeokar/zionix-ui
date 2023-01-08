@@ -88,36 +88,11 @@ const themeWithFullOptions: ThemeType = {
   },
 };
 
-
   <ThemeFont font="Poppins" />
   <ThemeContextProvider theme={theme}>
     <Component {...pageProps} />
   </ThemeContextProvider>
 
-```
-
-### Global vars css
-
-These are the global variables used by @zionix/ui and customize your own css components:
-
-```css
-root: {
-  --accent: #f72585;
-  --bg: #f5f5f5;
-  --black: #333333;
-  --error: #d32f2f;
-  --lightGray: #c4c4c4;
-  --primary: #0288d1;
-  --secondary: #616161;
-  --success: #689f38;
-  --warning: #fbc02d;
-  --white: #ffffff;
-
-  --component-card--filter: drop-shadow(0 5px 4px var(--lightGray));
-  --borderRadius: 0.8rem;
-  --gap: 1.6rem;
-  --padding: 1.6rem;
-}
 ```
 
 ### `useThemeContext` hook
@@ -133,6 +108,19 @@ const theme = useThemeContext();
 console.log(theme.colors.primary);
 ```
 
+### `Marker` Component
+```js
+    <Marker />
+    <Marker primary />
+    <Marker secondary />
+    <Marker accent />
+    <Marker success />
+    <Marker warning />
+    <Marker error />
+    <Marker color='#8e44ad' />
+    <Marker size={30} />
+```
+
 ### `Text` Component
 
 ```js
@@ -142,7 +130,8 @@ console.log(theme.colors.primary);
     <Text level={3} fontWeight={600}>Typography h3</Text>
     <Text level={4} accent>Typography h4</Text>
     <Text level={5}>Typography h5</Text>
-    <Text level={6} style={{color: 'var(--black)'}}>Typography h6</Text>
+    <Text level={6}>Typography h6</Text>
+    <Text level={6} color='var(--black)'>Typography h6</Text>
     <Text secondary>Simple text with normal size</Text>
     <Text>Simple text with normal size</Text>
 ```
@@ -238,3 +227,27 @@ Built-in [phosphor-icons](https://https://phosphoricons.com) icon pack, to see t
 ```
 
 Calm down guys, I'm still creating the components, I'm working alone and I can only work in the library in my spare time :D
+
+### Global vars css
+
+These are the global variables used by @zionix/ui and customize your own css components:
+
+```css
+root: {
+  --accent: #f72585;
+  --bg: #f5f5f5;
+  --black: #333333;
+  --error: #d32f2f;
+  --lightGray: #c4c4c4;
+  --primary: #0288d1;
+  --secondary: #616161;
+  --success: #689f38;
+  --warning: #fbc02d;
+  --white: #ffffff;
+
+  --component-card--filter: drop-shadow(0 5px 4px var(--lightGray));
+  --borderRadius: 0.8rem;
+  --gap: 1.6rem;
+  --padding: 1.6rem;
+}
+```

@@ -159,7 +159,7 @@ export const ThemeContextProvider = ({ children, theme }: IProps) => {
 
           main:focus {
             outline: none;
-          }                    
+          }                   
       `}
       </style>
       {children}
