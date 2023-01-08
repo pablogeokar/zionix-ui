@@ -8,9 +8,10 @@
 
 A collection of ready-to-use components based on pure clean css modules 🚧 is under Construction!
 
+THIS COMPONENT IS STILL BEING DEVELOPED, IF YOU WANT TO CONTRIBUTE YOU CAN CONTACT US.
+
 🇧🇷 Alô galera do Brasil, esta biblioteca ainda está em construção, caso alguém queira ajudar é só me gritar 😀
 
-THIS COMPONENT IS STILL BEING DEVELOPED, IF YOU WANT TO CONTRIBUTE YOU CAN CONTACT US.
 
 ## Quick start
 
@@ -19,14 +20,6 @@ Import into `pages/_app.ts` ThemeContextProvider and ThemeFont
 First you will import the ThemeContextProvider and ThemeFont to the main page of your react project as in the example below,
 ThemeFont is optional, if you already have your own font loading routine, this component can be safely left out.
 
-An important detail, I know that many know but it is worth remembering once again, for correct responsiveness it is mandatory to insert the tag below in the header of your html.
-
-```html
-<header>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-</header>
-```
-
 🇧🇷 Primeiro você irá importar o ThemeContextProvider e o ThemeFont para a página principal do seu projeto react como no exemplo abaixo,
 o ThemeFont é opcional, caso você já tenha sua própria rotina de carregamento de fontes, este componente poderá ficar de fora tranquilamente.
 Alô galera do meu Braza lembrem-se de incluir no header do seu html a tag acima para que a responsividade funcione corretamente.
@@ -34,13 +27,19 @@ Alô galera do meu Braza lembrem-se de incluir no header do seu html a tag acima
 ```js
 import { ThemeContextProvider, ThemeFont } from "@zionix/ui";
 
-
   <ThemeFont font="Poppins" /> {/*ThemeFont is optional*/}
   <ThemeContextProvider>
     <Component {...pageProps} />
   </ThemeContextProvider>
-
 ```
+An important detail, I know that many know but it is worth remembering once again, for correct responsiveness it is mandatory to insert the tag below in the header of your html.
+
+```html
+<header>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=0" />
+</header>
+```
+
 
 Using the example above the default theme will be applied, to add your custom theme, our library also allows theme customization.
 
