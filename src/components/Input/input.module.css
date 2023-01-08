@@ -3,9 +3,8 @@
   flex-direction: column;
   justify-content: flex-end;
   flex: 1;
-  gap: 1rem;
+  gap: 1.6rem;
   width: 100%;
-  max-width: 450px;
 }
 
 .input {
@@ -15,10 +14,12 @@
   border-radius: var(--borderRadius);
   color: var(--black);
   background: var(--white);
+  font-size: var(--size-text);
 }
 
 .input::placeholder {
-  opacity: 0.8;
+  opacity: 0.6;
+  font-weight: 400;
 }
 
 .input:focus {

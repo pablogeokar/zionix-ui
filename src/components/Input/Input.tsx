@@ -9,7 +9,7 @@ export default function Input(props: OwnProps) {
   return (
     <div className={css.container}>
       {props.label && <label>{props.label}</label>}
-      <input type="text" {...props} className={`${css.input} ${props.className ? props.className : ''}`} />
+      <input type="text" className={`${css['input']}`} {...props} />
     </div>
   )
 }

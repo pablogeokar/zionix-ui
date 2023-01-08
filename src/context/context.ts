@@ -64,9 +64,9 @@ export const DEFAULT_STATES: Theme = {
     h1: "clamp(3.6rem, 2.6vw, 4.2rem)",
     h2: "clamp(2.882rem, 2.08vw, 3.4rem)",
     h3: "clamp(2.1rem, 1.6vw, 2.7rem)",
-    h4: "clamp(1.6rem, 1.250vw, 2.1rem)",
-    h5: "clamp(1.2rem, 1vw, 1.5rem)",
-    h6: "clamp(.9rem, 0.7vw, 1.1rem)",
+    h4: "clamp(1.6rem, 1.3vw, 2rem)",
+    h5: "clamp(1.3rem, 1vw, 1.5rem)",
+    h6: "clamp(1rem, 0.7vw, 1.1rem)",
   },
 };
 

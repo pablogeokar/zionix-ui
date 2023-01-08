@@ -27,17 +27,23 @@
   gap: var(--gap, 1.6rem);
 }
 
-.row--mobile {
-  flex-direction: column;
-  /*justify-content: center;*/
-  align-items: flex-start;
+.row--end {
+  justify-content: flex-end !important;
 }
 
+/*
+.row--mobile {
+  flex-direction: column;
+  //justify-content: center;
+/*  align-items: flex-start;
+}
+*/
 
-@media only screen and (max-width: 500px) {
+
+/* Small devices (landscape phones, 576px and up)*/
+@media only screen and (max-width: 576px) {
   .row {
     flex-direction: column;
     align-items: flex-start;
-    /*background-color: red;*/
   }
 }

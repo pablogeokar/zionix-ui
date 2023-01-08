@@ -56,20 +56,20 @@ export const ThemeContextProvider = ({ children, theme }: IProps) => {
             /* Components vars*/
             --component-card--filter: ${USER.components?.card?.filter || D.components?.card?.filter};
 
+            --size-text:    ${USER.sizes?.text || D.sizes?.text};
             --borderRadius: ${USER.layout?.borderRadius || D.layout?.borderRadius};
             --gap:          ${USER.layout?.gap || D.layout?.gap};
             --padding:      ${USER.layout?.padding || D.layout?.padding};
           }
 
           html {
-            font-size: 62.5%;
-            box-sizing: border-box; 
+            font-size: 62.5%;            
           }
 
           *,
           *::before,
           *::after {
-            box-sizing: inherit;
+            box-sizing: border-box;
           }
 
           body { 

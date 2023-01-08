@@ -19,8 +19,17 @@ Import into `pages/_app.ts` ThemeContextProvider and ThemeFont
 First you will import the ThemeContextProvider and ThemeFont to the main page of your react project as in the example below,
 ThemeFont is optional, if you already have your own font loading routine, this component can be safely left out.
 
+An important detail, I know that many know but it is worth remembering once again, for correct responsiveness it is mandatory to insert the tag below in the header of your html.
+
+```html
+<header>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</header>
+```
+
 🇧🇷 Primeiro você irá importar o ThemeContextProvider e o ThemeFont para a página principal do seu projeto react como no exemplo abaixo,
 o ThemeFont é opcional, caso você já tenha sua própria rotina de carregamento de fontes, este componente poderá ficar de fora tranquilamente.
+Alô galera do meu Braza lembrem-se de incluir no header do seu html a tag acima para que a responsividade funcione corretamente.
 
 ```js
 import { ThemeContextProvider, ThemeFont } from "@zionix/ui";
@@ -109,6 +118,7 @@ console.log(theme.colors.primary);
 ```
 
 ### `Marker` Component
+
 ```js
     <Marker />
     <Marker primary />
@@ -198,32 +208,31 @@ Built-in [phosphor-icons](https://https://phosphoricons.com) icon pack, to see t
 <Input label="Name" />
 ```
 
-### `Box` Component
+### `Card` Component
 
 ```js
-<Box.Container>
+<Card.Container maxWidth="650px">
   <Text level={1} secondary>
-    Hello,{" "}
+    Hello,
   </Text>
-
-  <Box.Row>
+  <Card.Row>
     <Input label="Name" />
     <Input label="Last name" />
-  </Box.Row>
+  </Card.Row>
 
   <Input label="E-mail" type="email" />
 
-  <Box.Row>
+  <Card.Row end>
     <Button btnPrimary btnInverted btnBorderNone>
-      <Icon icon="User" />
+      <Icon iconName="User" />
       Join now
     </Button>
     <Button btnPrimary>
-      <Icon icon="LockKeyOpen" />
+      <Icon iconName="LockKeyOpen" />
       Sign In
     </Button>
-  </Box.Row>
-</Box.Container>
+  </Card.Row>
+</Card.Container>
 ```
 
 Calm down guys, I'm still creating the components, I'm working alone and I can only work in the library in my spare time :D
