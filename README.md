@@ -12,7 +12,6 @@ THIS COMPONENT IS STILL BEING DEVELOPED, IF YOU WANT TO CONTRIBUTE YOU CAN CONTA
 
 🇧🇷 Alô galera do Brasil, esta biblioteca ainda está em construção, caso alguém queira ajudar é só me gritar 😀
 
-
 ## Quick start
 
 Import into `pages/_app.ts` ThemeContextProvider and ThemeFont
@@ -32,14 +31,17 @@ import { ThemeContextProvider, ThemeFont } from "@zionix/ui";
     <Component {...pageProps} />
   </ThemeContextProvider>
 ```
+
 An important detail, I know that many know but it is worth remembering once again, for correct responsiveness it is mandatory to insert the tag below in the header of your html.
 
 ```html
 <header>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=0" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=0"
+  />
 </header>
 ```
-
 
 Using the example above the default theme will be applied, to add your custom theme, our library also allows theme customization.
 
@@ -114,6 +116,26 @@ import { useThemeContext } from "@zionix/ui";
 
 const theme = useThemeContext();
 console.log(theme.colors.primary);
+```
+
+### `Tabs` Component
+
+```js
+<Tabs
+  title="#Tab Title"
+  tabs={[
+    {
+      iconName: "Monitor",
+      label: "Design",
+      component: <Text>Content Tab #1</Text>,
+    },
+    {
+      iconName: "Code",
+      label: "Code",
+      component: <Text>Content Tab #2</Text>,
+    },
+  ]}
+/>
 ```
 
 ### `Marker` Component

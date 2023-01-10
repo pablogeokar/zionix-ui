@@ -166,3 +166,12 @@
 .button-border--none {
   border: none !important;
 }
+
+/* Small devices (landscape phones, 576px and up)*/
+@media only screen and (max-width: 576px) {
+/*  .button,
+  .button--shadow {
+    width: 100%;
+  }
+  */
+}
