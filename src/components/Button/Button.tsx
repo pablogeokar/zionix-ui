@@ -1,52 +1,51 @@
 import React, { InputHTMLAttributes } from "react";
-import css from './Button.module.css'
+import css from './Button.module.scss'
 
 //export interface OwnProps extends InputHTMLAttributes<HTMLButtonElement> {
 export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  btnAccent?: boolean
-  btnError?: boolean
-  btnInverted?: boolean
-  //children?: React.ReactNode
-  btnPrimary?: boolean
-  btnSecondary?: boolean
-  btnSuccess?: boolean
-  btnWarning?: boolean
-  btnBorderNone?: boolean
+  accent?: boolean
+  error?: boolean
+  inverted?: boolean
+  primary?: boolean
+  secondary?: boolean
+  success?: boolean
+  warning?: boolean
+  BorderNone?: boolean
 }
 
 const ButtonWrapper = ({
-  btnAccent = false,
-  btnError = false,
-  btnInverted = false,
-  btnPrimary = false,
-  btnSecondary = false,
-  btnWarning = false,
-  btnSuccess = false,
-  btnBorderNone = false,
+  accent = false,
+  error = false,
+  inverted = false,
+  primary = false,
+  secondary = false,
+  warning = false,
+  success = false,
+  BorderNone = false,
   ...ButtonProps }: ButtonProps) => {
 
   function buttonClasses() {
     let objCSS = []
 
-    if (btnInverted) {
+    if (inverted) {
       objCSS.push(css['button'])
 
-      btnAccent && objCSS.push(css['button-accent--inverted'])
-      btnError && objCSS.push(css['button-error--inverted'])
-      btnPrimary && objCSS.push(css['button-primary--inverted'])
-      btnSecondary && objCSS.push(css['button-secondary--inverted'])
-      btnSuccess && objCSS.push(css['button-success--inverted'])
-      btnWarning && objCSS.push(css['button-warning--inverted'])
-      btnBorderNone && objCSS.push(css['button-border--none'])
+      accent && objCSS.push(css['button-accent--inverted'])
+      error && objCSS.push(css['button-error--inverted'])
+      primary && objCSS.push(css['button-primary--inverted'])
+      secondary && objCSS.push(css['button-secondary--inverted'])
+      success && objCSS.push(css['button-success--inverted'])
+      warning && objCSS.push(css['button-warning--inverted'])
+      BorderNone && objCSS.push(css['button-border--none'])
     } else {
       objCSS.push(css['button--shadow'])
 
-      btnAccent && objCSS.push(css['button-accent'])
-      btnError && objCSS.push(css['button-error'])
-      btnPrimary && objCSS.push(css['button-primary'])
-      btnSecondary && objCSS.push(css['button-secondary'])
-      btnSuccess && objCSS.push(css['button-success'])
-      btnWarning && objCSS.push(css['button-warning'])
+      accent && objCSS.push(css['button-accent'])
+      error && objCSS.push(css['button-error'])
+      primary && objCSS.push(css['button-primary'])
+      secondary && objCSS.push(css['button-secondary'])
+      success && objCSS.push(css['button-success'])
+      warning && objCSS.push(css['button-warning'])
     }
     let cssString = ''
     objCSS.map(prop => cssString += `${prop} `)
