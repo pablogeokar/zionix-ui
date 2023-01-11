@@ -173,24 +173,24 @@ Normal
 
 ```js
     <Button>Login</Button>
-    <Button btnPrimary><Icon icon='LockKeyOpen' />Sign In</Button>
-    <Button btnSecondary><Icon icon='LockKeyOpen' />Login</Button>
-    <Button btnAccent>Login</Button>
-    <Button btnSuccess>Login</Button>
-    <Button btnWarning>Login</Button>
-    <Button btnError>Login</Button>
+    <Button primary><Icon iconName='LockKeyOpen' />Sign In</Button>
+    <Button secondary><Icon iconName='LockKeyOpen' />Login</Button>
+    <Button accent>Login</Button>
+    <Button success>Login</Button>
+    <Button warning>Login</Button>
+    <Button error>Login</Button>
 ```
 
 Background transparent with inverted colors
 
 ```js
-    <Button btnInverted>Login</Button>
-    <Button btnPrimary btnInverted><Icon icon='LockKeyOpen' />Sign In</Button>
-    <Button btnSecondary btnInverted><Icon icon='LockKeyOpen' />Login</Button>
-    <Button btnAccent btnInverted>Login</Button>
-    <Button btnSuccess btnInverted>Login</Button>
-    <Button btnWarning btnInverted>Login</Button>
-    <Button btnError btnInverted>Login</Button>
+    <Button inverted>Login</Button>
+    <Button primary inverted><Icon iconName='LockKeyOpen' />Sign In</Button>
+    <Button secondary inverted><Icon iconName='LockKeyOpen' />Login</Button>
+    <Button accent inverted>Login</Button>
+    <Button success inverted>Login</Button>
+    <Button warning inverted>Login</Button>
+    <Button error inverted>Login</Button>
 ```
 
 ### `Icon` Component

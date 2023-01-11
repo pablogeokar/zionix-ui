@@ -10,7 +10,7 @@ export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElemen
   secondary?: boolean
   success?: boolean
   warning?: boolean
-  BorderNone?: boolean
+  borderNone?: boolean
 }
 
 const ButtonWrapper = ({
@@ -21,7 +21,7 @@ const ButtonWrapper = ({
   secondary = false,
   warning = false,
   success = false,
-  BorderNone = false,
+  borderNone = false,
   ...ButtonProps }: ButtonProps) => {
 
   function buttonClasses() {
@@ -36,7 +36,7 @@ const ButtonWrapper = ({
       secondary && objCSS.push(css['button-secondary--inverted'])
       success && objCSS.push(css['button-success--inverted'])
       warning && objCSS.push(css['button-warning--inverted'])
-      BorderNone && objCSS.push(css['button-border--none'])
+      borderNone && objCSS.push(css['button-border--none'])
     } else {
       objCSS.push(css['button--shadow'])
 
