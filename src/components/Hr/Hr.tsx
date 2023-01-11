@@ -1,4 +1,4 @@
-import styles from './Hr.module.css'
+import styles from './Hr.module.scss'
 
 export default function Hr() {
   return (

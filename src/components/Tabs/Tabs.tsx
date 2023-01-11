@@ -2,7 +2,7 @@ import { ReactElement, useState } from 'react';
 import Icon from '../Icon';
 import { IconsType } from '../Icon/IconsType';
 import Text from '../Text';
-import styles from './Tabs.module.css'
+import styles from './Tabs.module.scss'
 import { cssValidation, cssValidationProps } from '../../helpers'
 
 interface TabItemProps extends IconsType {

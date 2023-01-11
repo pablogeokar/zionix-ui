@@ -1,6 +1,6 @@
 import React from 'react';
 import { cssValidation, cssValidationProps } from '../../helpers';
-import css from './text.module.css'
+import css from './text.module.scss'
 
 export interface TextProps {
   children?: React.ReactNode;

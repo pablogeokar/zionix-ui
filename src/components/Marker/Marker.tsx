@@ -1,4 +1,4 @@
-import styles from './Marker.module.css'
+import styles from './Marker.module.scss'
 import { cssValidation, cssValidationProps } from '../../helpers'
 
 interface MarkerProps {

@@ -1,5 +1,5 @@
 import React from 'react';
-import css from './Card.module.css'
+import css from './Card.module.scss'
 
 /*interface CardProps extends React.HTMLAttributes<HTMLDivElement> {*/
 interface CardProps {
