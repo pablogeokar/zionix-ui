@@ -18,7 +18,6 @@ interface ColumnProps {
 }
 
 export function Container(props: CardProps) {
-  //return <div className={`${css['card']} ${props.shadow === true && css['card--shadow']}`} {...props}>{props.children}</div>
   return <div className={`${css['card']} ${props.shadow === true && css['card--shadow']}`} style={{ maxWidth: props.maxWidth ? props.maxWidth : '100%' }} >{props.children}</div>
 }
 
@@ -27,7 +26,6 @@ export function Row(props: RowProps) {
 }
 
 export function Column(props: ColumnProps) {
-  //return <div className={css['column']} {...props}>{props.children}</div>
   return <div className={css['column']} >{props.children}</div>
 }
 

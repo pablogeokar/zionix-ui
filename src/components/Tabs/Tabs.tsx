@@ -3,7 +3,6 @@ import Icon from '../Icon';
 import { IconsType } from '../Icon/IconsType';
 import Text from '../Text';
 import styles from './Tabs.module.scss'
-import { cssValidation, cssValidationProps } from '../../helpers'
 
 interface TabItemProps extends IconsType {
   label: string;
@@ -22,12 +21,6 @@ export default function Tabs({ title, tabs }: TabsProps) {
   const activeTab = (index: number) => {
     setActiveTabIndex(index)
   }
-
-  /*
-  const validStyles = cssValidation([
-    {name: styles['tab'], validation: index === activeTabIndex }
-  ])
-  */
 
   return (
 

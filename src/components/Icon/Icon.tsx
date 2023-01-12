@@ -24,7 +24,7 @@ export default function Icon({ iconName, className, weight = 'thin', size = 28 }
       </div>
     )
   } catch {
-    //const DevPhosphorIcon = require(`../../node_modules/phosphor-react`)[iconName] || null
+    //const DevPhosphorIcon = require(`../../node_modules/phosphor-react`)[iconName]
     return (
       <div className={className}>
         {/**❌ modo link em ambiente de desenvolvedor */}

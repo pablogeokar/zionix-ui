@@ -1,5 +1,5 @@
 import styles from './Marker.module.scss'
-import { cssValidation, cssValidationProps } from '../../helpers'
+import { cssValidation, /*cssValidationProps*/ } from '../../helpers'
 
 interface MarkerProps {
   color?: string
@@ -14,7 +14,7 @@ interface MarkerProps {
 
 export default function Marker({ primary, secondary, accent, success, warning, error, color, size = 20 }: MarkerProps) {
 
-  const css: cssValidationProps[] = [
+  const css = cssValidation([
     { name: styles.Marker, validation: true },
     { name: styles.primary, validation: primary === true },
     { name: styles.secondary, validation: secondary === true },
@@ -22,11 +22,11 @@ export default function Marker({ primary, secondary, accent, success, warning, e
     { name: styles.success, validation: success === true },
     { name: styles.warning, validation: warning === true },
     { name: styles.error, validation: error === true },
-  ]
+  ])
 
 
 
   return (
-    <div className={cssValidation(css)} style={{ background: color, width: size, height: size }} />
+    <div className={css} style={{ background: color, width: size, height: size }} />
   )
 }

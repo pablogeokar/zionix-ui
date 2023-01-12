@@ -1,5 +1,5 @@
 import React from 'react';
-import { cssValidation, cssValidationProps } from '../../helpers';
+import { cssValidation, /*cssValidationProps*/ } from '../../helpers';
 import css from './text.module.scss'
 
 export interface TextProps {
@@ -28,6 +28,7 @@ export default function Text({
   onClick
 }: TextProps) {
 
+  /*
   const cssClasses: cssValidationProps[] = [
     { name: css.text, validation: true },
     { name: css['text--primary'], validation: primary === true },
@@ -35,8 +36,15 @@ export default function Text({
     { name: css['text--accent'], validation: accent === true },
     { name: className, validation: className !== undefined }
   ]
+  */
 
-  const classList = cssValidation(cssClasses)
+  const classList = cssValidation([
+    { name: css.text, validation: true },
+    { name: css['text--primary'], validation: primary === true },
+    { name: css['text--seconday'], validation: secondary === true },
+    { name: css['text--accent'], validation: accent === true },
+    { name: className, validation: className !== undefined }
+  ])
 
 
   const styles = {

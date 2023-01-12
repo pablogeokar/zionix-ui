@@ -11,8 +11,9 @@
   font-size: 1.6rem;
   font-weight: 500;
   cursor: pointer;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
-    rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+  background: transparent;
+  /*box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
+    rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;*/
 
   &:hover {
     filter: brightness(1.09);
@@ -22,6 +23,12 @@
     filter: brightness(1.09);
   }
 }
+
+.shadow {
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
+    rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+}
+
 .button:disabled {
   cursor: not-allowed;
   &::before {

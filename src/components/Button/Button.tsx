@@ -88,6 +88,7 @@ export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElemen
   primaryInverted?: boolean
   secondary?: boolean
   secondaryInverted?: boolean
+  shadow?:boolean
   success?: boolean
   successInverted?: boolean
   warning?: boolean
@@ -111,6 +112,7 @@ export default function Button(props: ButtonProps) {
     { name: css['success'], validation: props.success === true },
     { name: css['warning--inverted'], validation: props.warningInverted === true },
     { name: css['warning'], validation: props.warning === true },
+    { name: css['shadow'], validation: props.shadow === true },
   ])
 
   return (
