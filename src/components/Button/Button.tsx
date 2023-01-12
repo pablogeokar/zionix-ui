@@ -76,28 +76,40 @@ import { cssValidation } from '../../helpers';
 
 
 export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  label?: string
   accent?: boolean
-  danger?: boolean
-  inverted?: boolean
-  primary?: boolean
-  secondary?: boolean
-  success?: boolean
-  warning?: boolean
+  accentInverted?: boolean
   borderNone?: boolean
+  danger?: boolean
+  dangerInverted?: boolean
   iconName?: IconsType[keyof IconsType]
+  label?: string
+  primary?: boolean
+  primaryInverted?: boolean
+  secondary?: boolean
+  secondaryInverted?: boolean
+  success?: boolean
+  successInverted?: boolean
+  warning?: boolean
+  warningInverted?: boolean
 }
 
 export default function Button(props: ButtonProps) {
 
   const styles = cssValidation([
-    { name: css['button'], validation: true },
-    { name: css['primary'], validation: props.primary === true },
-    { name: css['secondary'], validation: props.secondary === true },
+    { name: css['accent--inverted'], validation: props.accentInverted === true },
     { name: css['accent'], validation: props.accent === true },
-    { name: css['success'], validation: props.success === true },
+    { name: css['border--none'], validation: props.borderNone === true },
+    { name: css['button'], validation: true },
+    { name: css['danger--inverted'], validation: props.dangerInverted === true },
     { name: css['danger'], validation: props.danger === true },
-    { name: css['warning'], validation: props.warning === true }
+    { name: css['primary--inverted'], validation: props.primaryInverted === true },
+    { name: css['primary'], validation: props.primary === true },
+    { name: css['secondary--inverted'], validation: props.secondaryInverted === true },
+    { name: css['secondary'], validation: props.secondary === true },
+    { name: css['success--inverted'], validation: props.successInverted === true },
+    { name: css['success'], validation: props.success === true },
+    { name: css['warning--inverted'], validation: props.warningInverted === true },
+    { name: css['warning'], validation: props.warning === true },
   ])
 
   return (

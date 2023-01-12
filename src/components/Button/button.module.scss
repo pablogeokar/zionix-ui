@@ -235,3 +235,74 @@
   background: var(--warning);
   color: var(--black) !important;
 }
+
+.border--none {
+  border: 0 !important;
+}
+
+.primary--inverted {
+  background: transparent !important;
+  color: var(--primary);
+  border: 2px solid var(--primary);
+
+  &:hover {
+    background: var(--primary) !important;
+    color: var(--white);
+    border: 0;
+  }
+}
+.secondary--inverted {
+  background: transparent !important;
+  color: var(--secondary);
+  border: 2px solid var(--secondary);
+
+  &:hover {
+    background: var(--secondary) !important;
+    color: var(--white);
+    border: 0;
+  }
+}
+.accent--inverted {
+  background: transparent !important;
+  color: var(--accent);
+  border: 2px solid var(--accent);
+
+  &:hover {
+    background: var(--accent) !important;
+    color: var(--white);
+    border: 0;
+  }
+}
+.success--inverted {
+  background: transparent !important;
+  color: var(--success);
+  border: 2px solid var(--success);
+
+  &:hover {
+    background: var(--success) !important;
+    color: var(--white);
+    border: 0;
+  }
+}
+.warning--inverted {
+  background: transparent !important;
+  color: var(--warning);
+  border: 2px solid var(--warning);
+
+  &:hover {
+    background: var(--warning) !important;
+    color: var(--black);
+    border: 0;
+  }
+}
+.danger--inverted {
+  background: transparent !important;
+  color: var(--danger);
+  border: 2px solid var(--danger);
+
+  &:hover {
+    background: var(--danger) !important;
+    color: var(--white);
+    border: 0;
+  }
+}

@@ -23,12 +23,13 @@
 .row {
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  /*justify-content: flex-start;*/
+  justify-content: space-between;
   gap: var(--gap, 1.6rem);
 }
 
 .row--end {
-  justify-content: flex-end !important;
+  justify-content: flex-end;
 }
 
 /*
@@ -39,16 +40,19 @@
 }
 */
 
-
 /* Small devices (landscape phones, 576px and up)*/
 @media only screen and (max-width: 576px) {
   .row {
-    flex-direction: column;
+    //flex-direction: column;
+    flex-wrap: wrap;
     align-items: flex-start;
+    justify-content: space-between;
   }
 
-  .row button {
+  .row input {
+    min-width: 250px;
+  }
+  /*.row button {
     width: 100%;
-  }
-
+  }*/
 }
