@@ -1,7 +1,6 @@
-import React, { InputHTMLAttributes } from "react";
-import css from './Button.module.scss'
 
-//export interface OwnProps extends InputHTMLAttributes<HTMLButtonElement> {
+
+/*
 export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   accent?: boolean
   error?: boolean
@@ -13,6 +12,7 @@ export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElemen
   borderNone?: boolean
 }
 
+/*
 const ButtonWrapper = ({
   accent = false,
   error = false,
@@ -54,4 +54,60 @@ const ButtonWrapper = ({
   return <button className={buttonClasses()} {...ButtonProps}>{ButtonProps.children}</button>
 }
 
-export default ButtonWrapper;
+
+export default function Button({ label }: ButtonProps) {
+  return (
+    <button type='button' className={styles['button']}>
+      {label &&
+        <span className={styles['text']}>{label}</span>
+      }
+      <Icon iconName='DownloadSimple' size={28} className={styles.icon} weight='light' />
+    </button>
+  )
+}
+
+export default ButtonWrapper;*/
+
+import React, { InputHTMLAttributes } from "react";
+import css from './Button.module.scss'
+import { IconsType } from '../Icon/IconsType';
+import Icon from '../Icon'
+import { cssValidation } from '../../helpers';
+
+
+export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+  label?: string
+  accent?: boolean
+  danger?: boolean
+  inverted?: boolean
+  primary?: boolean
+  secondary?: boolean
+  success?: boolean
+  warning?: boolean
+  borderNone?: boolean
+  iconName?: IconsType[keyof IconsType]
+}
+
+export default function Button(props: ButtonProps) {
+
+  const styles = cssValidation([
+    { name: css['button'], validation: true },
+    { name: css['primary'], validation: props.primary === true },
+    { name: css['secondary'], validation: props.secondary === true },
+    { name: css['accent'], validation: props.accent === true },
+    { name: css['success'], validation: props.success === true },
+    { name: css['danger'], validation: props.danger === true },
+    { name: css['warning'], validation: props.warning === true }
+  ])
+
+  return (
+    <button type='button' className={styles} {...props}>
+      {props.label &&
+        <span className={css['text']}>{props.label}</span>
+      }
+      {props.iconName &&
+        <Icon iconName={props.iconName} className={css['icon']} />
+      }
+    </button>
+  )
+}

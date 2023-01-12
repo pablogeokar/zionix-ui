@@ -6,7 +6,7 @@ export interface Theme {
     accent?: string;
     black?: string;
     body?: string;
-    error?: string;
+    danger?: string;
     lightGray?: string;
     primary?: string;
     secondary?: string;
@@ -41,7 +41,7 @@ export const DEFAULT_STATES: Theme = {
     accent: "#f72585",
     black: "#333333",
     body: "#f5f5f5",
-    error: "#D32F2F",
+    danger: "#D32F2F",
     lightGray: "#c4c4c4",
     primary: "#0288D1",
     secondary: "#616161",

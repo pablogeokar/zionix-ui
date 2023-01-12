@@ -1,4 +1,4 @@
-/* Deafault Style*/
+/* Default Style
 .button {
   display: flex;
   align-items: center;
@@ -17,7 +17,7 @@
   filter: brightness(.9);
 }
 
-/* Shadow Style*/
+/* Shadow Style
 .button--shadow {
   display: flex;
   align-items: center;
@@ -48,44 +48,44 @@
 }
 
 
-/* Primary*/
+/* Primary
 .button-primary {
   background: var(--primary);
   color: var(--white);
 }
 
-/* Secondary*/
+/* Secondary
 .button-secondary {
   background: var(--secondary);
   color: var(--white);
   font-weight: 500;
 }
 
-/* Accent*/
+/* Accent
 .button-accent {
   background: var(--accent);
   color: var(--white);
 }
 
-/* Success*/
+/* Success
 .button-success {
   background: var(--success, #689F38);
   color: var(--white);
 }
 
-/* Warning*/
+/* Warning
 .button-warning {
   background: var(--warning, #FBC02D);
   color: #222222;
 }
 
-/* Error*/
+/* Error
 .button-error {
   background: var(--error, #D32F2F);
   color: var(--white);
 }
 
-/* Primary Inverted*/
+/* Primary Inverted
 .button-primary--inverted {
   background: transparent;
   color: var(--primary);
@@ -98,7 +98,7 @@
   color: var(--white);
 }
 
-/* Seconday inverted*/
+/* Seconday inverted
 .button-secondary--inverted {
   background: transparent;
   color: var(--secondary);
@@ -111,7 +111,7 @@
   color: var(--white);
 }
 
-/* Accent Inverted*/
+/* Accent Inverted
 .button-accent--inverted {
   background: transparent;
   color: var(--accent);
@@ -124,7 +124,7 @@
   color: var(--white);
 }
 
-/* Success Inverted*/
+/* Success Inverted
 .button-success--inverted {
   background: transparent;
   color: var(--success, #689F38);
@@ -137,7 +137,7 @@
   color: var(--white);
 }
 
-/* Warning Inverted*/
+/* Warning Inverted
 .button-warning--inverted {
   background: transparent;
   color: var(--warning, #FBC02D);
@@ -150,7 +150,7 @@
   color: var(--white);
 }
 
-/* Warning Error*/
+/* Warning Error
 .button-error--inverted {
   background: transparent;
   color: var(--error, #D32F2F);
@@ -167,11 +167,71 @@
   border: none !important;
 }
 
-/* Small devices (landscape phones, 576px and up)*/
+/* Small devices (landscape phones, 576px and up)
 @media only screen and (max-width: 576px) {
 /*  .button,
   .button--shadow {
     width: 100%;
   }
-  */
+ 
+}*/
+.button {
+  display: flex;
+  align-items: center;
+  height: 48px;
+  padding: 0;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  overflow: hidden;
+  font-size: 1.6rem;
+  font-weight: 500;
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
+    rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+
+  &:hover {
+    filter: brightness(1.09);
+  }
+
+  &:active {
+    filter: brightness(1.09);
+  }
+}
+
+.text,
+.icon {
+  display: inline-flex;
+  align-items: center;
+  padding: 0 24px;
+  height: 100%;
+}
+
+.icon {
+  background: rgba(0, 0, 0, 0.08);
+}
+
+.primary {
+  background: var(--primary);
+  color: var(--white) !important;
+}
+.secondary {
+  background: var(--secondary);
+  color: var(--white) !important;
+}
+.accent {
+  background: var(--accent);
+  color: var(--white) !important;
+}
+.success {
+  background: var(--success);
+  color: var(--white) !important;
+}
+.danger {
+  background: var(--danger);
+  color: var(--white) !important;
+}
+.warning {
+  background: var(--warning);
+  color: var(--black) !important;
 }
