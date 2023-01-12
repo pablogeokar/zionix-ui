@@ -180,6 +180,28 @@ Normal
     <Button iconName='Trash' label='Delete' warning />
 ```
 
+Disabled
+
+```js
+    <Button iconName='DownloadSimple' primary label='Download' disabled />
+    <Button iconName='Newspaper' label='News' secondary disabled />
+    <Button iconName='Alarm' label='Schedule' accent disabled />
+    <Button iconName='Archive' label='Archive' success disabled />
+    <Button iconName='Trash' label='Delete' danger disabled />
+    <Button iconName='Trash' label='Delete' warning disabled />
+```
+
+Loading
+
+```js
+    <Button iconName='DownloadSimple' primary label='Download' isLoading />
+    <Button iconName='Newspaper' label='News' secondary isLoading />
+    <Button iconName='Alarm' label='Schedule' accent isLoading />
+    <Button iconName='Archive' label='Archive' success isLoading />
+    <Button iconName='Trash' label='Delete' danger isLoading />
+    <Button iconName='Trash' label='Delete' warning isLoading />
+```
+
 Background transparent with inverted colors
 
 ```js

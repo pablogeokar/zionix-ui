@@ -78,10 +78,11 @@ import { cssValidation } from '../../helpers';
 export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   accent?: boolean
   accentInverted?: boolean
-  borderNone?: boolean
+  bordernone?: boolean
   danger?: boolean
   dangerInverted?: boolean
   iconName?: IconsType[keyof IconsType]
+  isLoading?: boolean
   label?: string
   primary?: boolean
   primaryInverted?: boolean
@@ -98,7 +99,7 @@ export default function Button(props: ButtonProps) {
   const styles = cssValidation([
     { name: css['accent--inverted'], validation: props.accentInverted === true },
     { name: css['accent'], validation: props.accent === true },
-    { name: css['border--none'], validation: props.borderNone === true },
+    { name: css['border--none'], validation: props.bordernone === true },
     { name: css['button'], validation: true },
     { name: css['danger--inverted'], validation: props.dangerInverted === true },
     { name: css['danger'], validation: props.danger === true },
@@ -113,9 +114,15 @@ export default function Button(props: ButtonProps) {
   ])
 
   return (
-    <button type='button' className={styles} {...props}>
+    <button type='button' disabled={props.isLoading} className={styles} {...props}>
       {props.label &&
         <span className={css['text']}>{props.label}</span>
+      }
+      {
+        props.isLoading &&
+        <div className={css['loading']}>
+          <div className={css['spin']} />
+        </div>
       }
       {props.iconName &&
         <Icon iconName={props.iconName} className={css['icon']} />

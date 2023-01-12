@@ -1,181 +1,5 @@
-/* Default Style
 .button {
-  display: flex;
-  align-items: center;
   position: relative;
-  overflow: hidden;
-  display: flex;
-  gap: var(--gap);
-  border: none;
-  border-radius: var(--borderRadius);
-  padding: 10px 16px;
-  transition: all .4s;
-}
-
-.button:hover {
-  cursor: pointer;
-  filter: brightness(.9);
-}
-
-/* Shadow Style
-.button--shadow {
-  display: flex;
-  align-items: center;
-  position: relative;
-  overflow: hidden;
-  display: flex;
-  gap: var(--gap);
-  border: none;
-  border-radius: var(--borderRadius);
-  padding: 10px 16px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3);
-  transition: all .4s;
-}
-
-.button--shadow::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  height: 8%;
-  background: rgba(0, 0, 0, .2);
-}
-
-.button--shadow:hover {
-  cursor: pointer;
-  filter: brightness(1.1);
-}
-
-
-/* Primary
-.button-primary {
-  background: var(--primary);
-  color: var(--white);
-}
-
-/* Secondary
-.button-secondary {
-  background: var(--secondary);
-  color: var(--white);
-  font-weight: 500;
-}
-
-/* Accent
-.button-accent {
-  background: var(--accent);
-  color: var(--white);
-}
-
-/* Success
-.button-success {
-  background: var(--success, #689F38);
-  color: var(--white);
-}
-
-/* Warning
-.button-warning {
-  background: var(--warning, #FBC02D);
-  color: #222222;
-}
-
-/* Error
-.button-error {
-  background: var(--error, #D32F2F);
-  color: var(--white);
-}
-
-/* Primary Inverted
-.button-primary--inverted {
-  background: transparent;
-  color: var(--primary);
-  border: 2px solid var(--primary);
-  font-weight: 500;
-}
-
-.button-primary--inverted:hover {
-  background: var(--primary);
-  color: var(--white);
-}
-
-/* Seconday inverted
-.button-secondary--inverted {
-  background: transparent;
-  color: var(--secondary);
-  border: 2px solid var(--secondary);
-  font-weight: 500;
-}
-
-.button-secondary--inverted:hover {
-  background: var(--secondary);
-  color: var(--white);
-}
-
-/* Accent Inverted
-.button-accent--inverted {
-  background: transparent;
-  color: var(--accent);
-  border: 2px solid var(--accent);
-  font-weight: 500;
-}
-
-.button-accent--inverted:hover {
-  background: var(--accent);
-  color: var(--white);
-}
-
-/* Success Inverted
-.button-success--inverted {
-  background: transparent;
-  color: var(--success, #689F38);
-  border: 2px solid var(--success, #689F38);
-  font-weight: 500;
-}
-
-.button-success--inverted:hover {
-  background: var(--success, #689F38);
-  color: var(--white);
-}
-
-/* Warning Inverted
-.button-warning--inverted {
-  background: transparent;
-  color: var(--warning, #FBC02D);
-  border: 2px solid var(--warning, #FBC02D);
-  font-weight: 500;
-}
-
-.button-warning--inverted:hover {
-  background: var(--warning, #FBC02D);
-  color: var(--white);
-}
-
-/* Warning Error
-.button-error--inverted {
-  background: transparent;
-  color: var(--error, #D32F2F);
-  border: 2px solid var(--error, #D32F2F);
-  font-weight: 500;
-}
-
-.button-error--inverted:hover {
-  background: var(--error, #D32F2F);
-  color: var(--white);
-}
-
-.button-border--none {
-  border: none !important;
-}
-
-/* Small devices (landscape phones, 576px and up)
-@media only screen and (max-width: 576px) {
-/*  .button,
-  .button--shadow {
-    width: 100%;
-  }
- 
-}*/
-.button {
   display: flex;
   align-items: center;
   height: 48px;
@@ -198,7 +22,17 @@
     filter: brightness(1.09);
   }
 }
-
+.button:disabled {
+  cursor: not-allowed;
+  &::before {
+    position: absolute;
+    content: "";
+    background: #ffffff;
+    width: 100%;
+    height: 100%;
+    opacity: 0.4;
+  }
+}
 .text,
 .icon {
   display: inline-flex;
@@ -206,9 +40,44 @@
   padding: 0 24px;
   height: 100%;
 }
-
 .icon {
   background: rgba(0, 0, 0, 0.08);
+}
+.loading {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  /*background-color: rgba(255, 255, 255, 0.4);  */
+  /*pointer-events: none;
+  z-index:100;*/
+}
+.spin {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  border: 3px solid rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+  border-top-color: var(--primary);
+  /*pointer-events: none;*/
+  animation: spin 0.7s ease-in-out infinite;
+  -webkit-animation: spin 0.7s ease-in-out infinite;
+
+  @keyframes spin {
+    to {
+      -webkit-transform: rotate(360deg);
+    }
+  }
+
+  @-webkit-keyframes spin {
+    to {
+      -webkit-transform: rotate(360deg);
+    }
+  }
 }
 
 .primary {
