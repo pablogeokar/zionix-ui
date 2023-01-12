@@ -172,25 +172,34 @@ console.log(theme.colors.primary);
 Normal
 
 ```js
-    <Button>Login</Button>
-    <Button primary><Icon iconName='LockKeyOpen' />Sign In</Button>
-    <Button secondary><Icon iconName='LockKeyOpen' />Login</Button>
-    <Button accent>Login</Button>
-    <Button success>Login</Button>
-    <Button warning>Login</Button>
-    <Button error>Login</Button>
+    <Button iconName='DownloadSimple' primary label='Download' />
+    <Button iconName='Newspaper' label='News' secondary />
+    <Button iconName='Alarm' label='Schedule' accent />
+    <Button iconName='Archive' label='Archive' success />
+    <Button iconName='Trash' label='Delete' danger />
+    <Button iconName='Trash' label='Delete' warning />
 ```
 
 Background transparent with inverted colors
 
 ```js
-    <Button inverted>Login</Button>
-    <Button primary inverted><Icon iconName='LockKeyOpen' />Sign In</Button>
-    <Button secondary inverted><Icon iconName='LockKeyOpen' />Login</Button>
-    <Button accent inverted>Login</Button>
-    <Button success inverted>Login</Button>
-    <Button warning inverted>Login</Button>
-    <Button error inverted>Login</Button>
+    <Button iconName='DownloadSimple' primaryInverted label='Download' />
+    <Button iconName='Newspaper' label='News' secondaryInverted />
+    <Button iconName='Alarm' label='Schedule' accentInverted />
+    <Button iconName='Archive' label='Archive' successInverted />
+    <Button iconName='Trash' label='Delete' dangerInverted />
+    <Button iconName='Trash' label='Delete' warningInverted />
+```
+
+Background transparent with inverted colors and border none
+
+```js
+    <Button iconName='DownloadSimple' primaryInverted borderNone label='Download' />
+    <Button iconName='Newspaper' label='News' secondaryInverted borderNone/>
+    <Button iconName='Alarm' label='Schedule' accentInverted borderNone/>
+    <Button iconName='Archive' label='Archive' successInverted borderNone/>
+    <Button iconName='Trash' label='Delete' dangerInverted borderNone/>
+    <Button iconName='Trash' label='Delete' warningInverted borderNone/>
 ```
 
 ### `Icon` Component
@@ -244,14 +253,8 @@ Built-in [phosphor-icons](https://https://phosphoricons.com) icon pack, to see t
   <Input label="E-mail" type="email" />
 
   <Card.Row end>
-    <Button btnPrimary btnInverted btnBorderNone>
-      <Icon iconName="User" />
-      Join now
-    </Button>
-    <Button btnPrimary>
-      <Icon iconName="LockKeyOpen" />
-      Sign In
-    </Button>
+    <Button primaryInverted label="Join now" iconName="AddressBook" />
+    <Button primary label="Sign In" iconName="SignIn" />
   </Card.Row>
 </Card.Container>
 ```
@@ -267,7 +270,7 @@ root: {
   --accent: #f72585;
   --bg: #f5f5f5;
   --black: #333333;
-  --error: #d32f2f;
+  --danger: #d32f2f;
   --lightGray: #c4c4c4;
   --primary: #0288d1;
   --secondary: #616161;
