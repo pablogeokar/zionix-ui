@@ -105,7 +105,7 @@ const themeWithFullOptions: ThemeType = {
 
 ```
 
-### `useThemeContext` hook
+### `useThemeContext`
 
 You can access theme variables through useThemeContext, the sky is the limit on your creativity to build your own derived components.
 
@@ -118,7 +118,7 @@ const theme = useThemeContext();
 console.log(theme.colors.primary);
 ```
 
-### `Tabs` Component
+### `Tabs`
 
 ```js
 <Tabs
@@ -138,7 +138,7 @@ console.log(theme.colors.primary);
 />
 ```
 
-### `Marker` Component
+### `Marker`
 
 ```js
     <Marker />
@@ -152,7 +152,7 @@ console.log(theme.colors.primary);
     <Marker size={30} />
 ```
 
-### `Text` Component
+### `Text`
 
 ```js
     <Text level={1} fontWeight={800}>Typography h1</Text>
@@ -167,7 +167,7 @@ console.log(theme.colors.primary);
     <Text>Simple text with normal size</Text>
 ```
 
-### `Button` Component
+### `Button`
 
 Normal
 
@@ -224,7 +224,7 @@ Background transparent with inverted colors and border none
     <Button iconName='Trash' label='Delete' warningInverted borderNone/>
 ```
 
-### `Icon` Component
+### `Icon`
 
 Built-in [phosphor-icons](https://https://phosphoricons.com) icon pack, to see the full list of icons, go to the [phosphor-icons](https://https://phosphoricons.com) website and search for the icon you need.
 
@@ -254,13 +254,36 @@ Built-in [phosphor-icons](https://https://phosphoricons.com) icon pack, to see t
     <Icon icon="Users" weight="bold" />
 ```
 
-### `Input` Component
+### `Input`
 
 ```js
 <Input label="Name" />
 ```
 
-### `Card` Component
+### `Form`
+
+```js
+<Form.Container method='post'>
+  <Text level={2} separator>
+    <Icon iconName="UserPlus" /> New user
+  </Text>
+  <Form.Row>
+    <Input label="Name:" />
+    <Input label="Lastname:" />
+  </Form.Row>
+  <Form.Row>
+    <Input label="Password:" type="password" />
+    <Input label="Confirm password:" type="password" />
+  </Form.Row>
+  <Input label="Email:" />
+  <Form.Row end>
+    <Button type="reset" label="Clear form" />
+    <Button icon='Check' label='Save' success onClick={() => alert('Hello World!')} />
+  </Form.Row>
+</Form.Container>
+```
+
+### `Card`
 
 ```js
 <Card.Container maxWidth="650px">
@@ -283,7 +306,7 @@ Built-in [phosphor-icons](https://https://phosphoricons.com) icon pack, to see t
 
 Calm down guys, I'm still creating the components, I'm working alone and I can only work in the library in my spare time :D
 
-### Global vars css
+### css vars
 
 These are the global variables used by @zionix/ui and customize your own css components:
 

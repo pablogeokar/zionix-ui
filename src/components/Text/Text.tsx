@@ -1,5 +1,6 @@
 import React from 'react';
-import { cssValidation, /*cssValidationProps*/ } from '../../helpers';
+import { cssValidation } from '../../helpers';
+import Hr from '../Hr';
 import css from './text.module.scss'
 
 export interface TextProps {
@@ -30,22 +31,11 @@ export default function Text({
   style
 }: TextProps) {
 
-  /*
-  const cssClasses: cssValidationProps[] = [
-    { name: css.text, validation: true },
-    { name: css['text--primary'], validation: primary === true },
-    { name: css['text--seconday'], validation: secondary === true },
-    { name: css['text--accent'], validation: accent === true },
-    { name: className, validation: className !== undefined }
-  ]
-  */
-
   const classList = cssValidation([
     { name: css.text, validation: true },
     { name: css['text--primary'], validation: primary === true },
     { name: css['text--seconday'], validation: secondary === true },
-    { name: css['text--accent'], validation: accent === true },
-    { name: css['separator'], validation: separator === true },
+    { name: css['text--accent'], validation: accent === true },    
     { name: className, validation: className !== undefined }
   ])
 
@@ -82,6 +72,7 @@ export default function Text({
       {level === 4 && <h4 className={classList} onClick={onClick} style={{ ...styles.h4, ...style }}>{children}</h4>}
       {level === 5 && <h5 className={classList} onClick={onClick} style={{ ...styles.h5, ...style }}>{children}</h5>}
       {level === 6 && <h6 className={classList} onClick={onClick} style={{ ...styles.h6, ...style }}>{children}</h6>}
+      {separator && <Hr minimal/>}
     </>
   )
 }

@@ -1,7 +1,16 @@
-import styles from './Hr.module.scss'
+import { cssValidation } from '../../helpers'
+import css from './Hr.module.scss'
 
-export default function Hr() {
+interface HrProps {
+  minimal?: boolean
+}
+
+export default function Hr({ minimal }: HrProps) {
+  const styles = cssValidation([
+    { name: css.Hr, validation: true },
+    { name: css['Hr--minimal'], validation: minimal === true }
+  ])
   return (
-    <hr className={styles.Hr} />
+    <hr className={styles} />
   )
 }
