@@ -81,15 +81,15 @@ export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElemen
   bordernone?: boolean
   danger?: boolean
   dangerInverted?: boolean
-  iconName?: IconsType[keyof IconsType]
+  icon?: IconsType[keyof IconsType]
   isLoading?: boolean
   label?: string
   primary?: boolean
   primaryInverted?: boolean
   secondary?: boolean
   secondaryInverted?: boolean
-  shadow?:boolean
-  success?: boolean
+  shadow?: boolean
+  success?: boolean | undefined
   successInverted?: boolean
   warning?: boolean
   warningInverted?: boolean
@@ -109,7 +109,7 @@ export default function Button(props: ButtonProps) {
     { name: css['secondary--inverted'], validation: props.secondaryInverted === true },
     { name: css['secondary'], validation: props.secondary === true },
     { name: css['success--inverted'], validation: props.successInverted === true },
-    { name: css['success'], validation: props.success === true },
+    { name: css['success'], validation: props.success == true },
     { name: css['warning--inverted'], validation: props.warningInverted === true },
     { name: css['warning'], validation: props.warning === true },
     { name: css['shadow'], validation: props.shadow === true },
@@ -126,8 +126,8 @@ export default function Button(props: ButtonProps) {
           <div className={css['spin']} />
         </div>
       }
-      {props.iconName &&
-        <Icon iconName={props.iconName} className={css['icon']} />
+      {props.icon &&
+        <Icon iconName={props.icon} className={css['icon']} />
       }
     </button>
   )

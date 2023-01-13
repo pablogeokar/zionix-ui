@@ -3,29 +3,31 @@ import { cssValidation, /*cssValidationProps*/ } from '../../helpers';
 import css from './text.module.scss'
 
 export interface TextProps {
+  accent?: boolean
   children?: React.ReactNode;
-  level?: 1 | 2 | 3 | 4 | 5 | 6;
-  fontWeight?: 100 | 200 | 300 | 400 | 500 | 600 | 700 | 800 | 900
+  className?: {}
   color?: string
+  fontWeight?: 100 | 200 | 300 | 400 | 500 | 600 | 700 | 800 | 900
+  level?: 1 | 2 | 3 | 4 | 5 | 6;
+  onClick?: () => void
   primary?: boolean
   secondary?: boolean
-  accent?: boolean
-  onClick?: () => void
+  separator?: boolean
   style?: {}
-  className?: {}
 }
 
 export default function Text({
+  accent,
   children,
-  level,
-  fontWeight,
-  style,
   className,
+  color,
+  fontWeight,
+  level,
+  onClick,
   primary,
   secondary,
-  accent,
-  color,
-  onClick
+  separator,
+  style
 }: TextProps) {
 
   /*
@@ -43,6 +45,7 @@ export default function Text({
     { name: css['text--primary'], validation: primary === true },
     { name: css['text--seconday'], validation: secondary === true },
     { name: css['text--accent'], validation: accent === true },
+    { name: css['separator'], validation: separator === true },
     { name: className, validation: className !== undefined }
   ])
 
