@@ -89,7 +89,7 @@ export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElemen
   secondary?: boolean
   secondaryInverted?: boolean
   shadow?: boolean
-  success?: boolean | undefined
+  success?: boolean
   successInverted?: boolean
   warning?: boolean
   warningInverted?: boolean
@@ -109,14 +109,14 @@ export default function Button(props: ButtonProps) {
     { name: css['secondary--inverted'], validation: props.secondaryInverted === true },
     { name: css['secondary'], validation: props.secondary === true },
     { name: css['success--inverted'], validation: props.successInverted === true },
-    { name: css['success'], validation: props.success == true },
+    { name: css['success'], validation: props.success === true },
     { name: css['warning--inverted'], validation: props.warningInverted === true },
     { name: css['warning'], validation: props.warning === true },
     { name: css['shadow'], validation: props.shadow === true },
   ])
 
   return (
-    <button type='button' disabled={props.isLoading} className={styles} {...props}>
+    <button type='button' disabled={props.isLoading} className={styles} onClick={props.onClick} >
       {props.label &&
         <span className={css['text']}>{props.label}</span>
       }
