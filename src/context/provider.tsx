@@ -46,6 +46,7 @@ export const ThemeContextProvider = ({ children, theme }: IProps) => {
             --bg:           ${USER.colors?.body || D.colors?.body};
             --black:        ${USER.colors?.black || D.colors?.black};
             --danger:       ${USER.colors?.danger || D.colors?.danger};
+            --gray:         ${USER.colors?.gray || D.colors?.gray};
             --lightGray:    ${USER.colors?.lightGray || D.colors?.lightGray};
             --primary:      ${USER.colors?.primary || D.colors?.primary};
             --secondary:    ${USER.colors?.secondary || D.colors?.secondary};

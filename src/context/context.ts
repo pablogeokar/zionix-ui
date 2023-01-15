@@ -7,6 +7,7 @@ export interface Theme {
     black?: string;
     body?: string;
     danger?: string;
+    gray?:string;
     lightGray?: string;
     primary?: string;
     secondary?: string;
@@ -42,6 +43,7 @@ export const DEFAULT_STATES: Theme = {
     black: "#333333",
     body: "#f5f5f5",
     danger: "#D32F2F",
+    gray: '#95a5a6',
     lightGray: "#c4c4c4",
     primary: "#0288D1",
     secondary: "#616161",
