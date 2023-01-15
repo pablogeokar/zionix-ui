@@ -17,22 +17,17 @@ interface TabsProps {
 export default function Tabs({ minHeight = '200px', tabs }: TabsProps) {
 
   const [activeTabIndex, setActiveTabIndex] = useState(0);
+  const [markPosition, setMarkPosition] = useState({ left: '0', width: '50px' })
 
   const activeTab = (index: number, event: any) => {
 
     if (activeTabIndex !== index) {
 
-      const mark = document.querySelector('#tab-indicator') as HTMLElement;
-      const tabs = document.querySelectorAll('#tab-body div')
-
-      tabs.forEach(i => {
-        i.classList.remove(css['tab-active'])
+      // Update left and width of new mark position
+      setMarkPosition({
+        left: event.target.offsetLeft + 'px',
+        width: event.target.offsetWidth + 'px'
       })
-
-      mark.style.left = event.target.offsetLeft + 'px';
-      mark.style.width = event.target.offsetWidth + 'px';
-
-      tabs[index].classList.add(css['tab-active']);
 
       setActiveTabIndex(index);
     }
@@ -55,11 +50,11 @@ export default function Tabs({ minHeight = '200px', tabs }: TabsProps) {
             ))
           }
         </div>
-        <div id='tab-indicator' className={css['tab-indicator']} />
+        <div id='tab-indicator' className={css['tab-indicator']} style={{ left: markPosition.left, width: markPosition.width }} />
         <div id="tab-body" className={css['tab-body']}>
           {
             tabs.map((tab, index) => (
-              <div key={tab.label} className={index === 0 ? css['tab-active'] : ''}>
+              <div key={tab.label} className={index === activeTabIndex ? css['tab-active'] : ''}>
                 {tab.component}
               </div>
             ))
