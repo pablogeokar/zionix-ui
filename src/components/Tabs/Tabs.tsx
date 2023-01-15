@@ -1,4 +1,4 @@
-import { ReactElement, useState } from 'react'
+import { ReactElement, ReactNode, useState } from 'react'
 import Icon from '../Icon'
 import { IconsType } from '../Icon/IconsType';
 import css from './Tabs.module.scss'
@@ -6,7 +6,7 @@ import css from './Tabs.module.scss'
 interface TabItemProps {
   icon?: IconsType[keyof IconsType]
   label: string;
-  component: ReactElement;
+  component: ReactElement | ReactNode | JSX.Element;
 }
 
 interface TabsProps {
