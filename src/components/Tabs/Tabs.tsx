@@ -54,7 +54,7 @@ export default function Tabs({ minHeight = '200px', tabs }: TabsProps) {
         <div id="tab-body" className={css['tab-body']}>
           {
             tabs.map((tab, index) => (
-              <div key={tab.label} className={index === activeTabIndex ? css['tab-active'] : ''}>
+              <div key={tab.label} className={`${css['tab']} ${index === activeTabIndex ? css['tab-active'] : ''}`}>
                 {tab.component}
               </div>
             ))
